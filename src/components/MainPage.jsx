@@ -28,8 +28,7 @@ const Wrapper = styled.div`
   border-radius: 10px;
   font-family: sans-serif;
   position: absolute;
-  top: 885px;
-`;
+  bottom: -60px;`;
 const Checks = styled.div`
   padding: 20px;
   display: flex;

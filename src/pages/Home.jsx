@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import Footer from '../components/Footer'
 import MainPage from '../components/MainPage'
 import Navbar from '../components/Navbar'
 import Photos from '../components/Photos'
+import Review from '../components/Review'
 import RoomsAndSuits from '../components/RoomsAndSuits'
 import Wellcome from '../components/Wellcome'
 import Image from '../img/hero.jpeg'
@@ -25,8 +27,9 @@ const Home = () => {
       <Wellcome/>
       <RoomsAndSuits/>
       <Photos/>
+      <Review/>
+      <Footer/>
     </Container>
-
   )
 }
 
