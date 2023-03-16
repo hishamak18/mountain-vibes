@@ -11,8 +11,8 @@ import {
   
   const Container = styled.div`
     display: flex;
-    margin-left: 60px;
-
+  background:#403a3a;
+  color:white;
 
   `
   const Left = styled.div`
@@ -93,7 +93,7 @@ import {
     return (
       <Container>
         <Left>
-          <Logo>Sana.</Logo>
+          <Logo>MountainVibes.</Logo>
           <Desc>
             Lorem ipsum dolor sit amet, <br /> consectetur adipisicing elit.{' '}
             <br /> Sunt blanditiis assumenda ex nobis quia modi vitae beatae{' '}

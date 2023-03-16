@@ -19,6 +19,11 @@ const HeaderMainPage = styled.h1`
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 18px;
+  font-size: 80px;
+  font-family: "Playfair Display", times, serif;
+  color: #fff;
+  line-height: 1;
+  font-weight: bold;
 `;
 
 const Wrapper = styled.div`

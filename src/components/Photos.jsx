@@ -61,7 +61,7 @@ const Tittle = styled.h1`
 `;
 
 const Image = styled.img`
-  height: 80%;
+  height: 60%;
   border-radius: 8px;
 `;
 const TittleH = styled.h1`

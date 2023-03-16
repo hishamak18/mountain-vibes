@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Logos from "../img/logoHero.png";
+import { Outlet, Link } from "react-router-dom";
+
 
 const Container = styled.div`
   // color:white;
@@ -31,7 +33,7 @@ const Centre = styled.div`
 const Middle = styled.h1`
   flex: 1;
   color: #f48220;
-  color: grey;
+  color: #403a3a;
 `;
 const Logo = styled.img`
   height: 60px;
@@ -59,7 +61,6 @@ const A = styled.a`
   }
 `;
 
-
 const NavBar = () => {
   return (
     <Container>
@@ -67,23 +68,24 @@ const NavBar = () => {
         <Centre>
           <Logo src={Logos} />
         </Centre>
-        {/* <Middle>MountainVibes.</Middle> */}
+        <Middle>MountainVibes.</Middle>
         <Right>
         <LiandH>
         <Ul>
           <Li>
-            <A href="">Home</A>
+          <Link style={{color:'black',textDecoration:'none',fontSize:'1.6em'}}  to="/">Home</Link>
           </Li>
           <Li>
-            <A href="">About</A>
+          <Link style={{color:'black',textDecoration:'none',fontSize:'1.6em'}}  to="/Reservation">About</Link>
           </Li>
           <Li>
-            <A href="">Contact</A>
+          <Link style={{color:'black',textDecoration:'none',fontSize:'1.6em'}}  to="/Reservation">Reservation</Link>
           </Li>
           <Li>
-            <A href="">Reservation</A>
+          <Link style={{color:'black',textDecoration:'none',fontSize:'1.6em'}}  to="/Reservation">Contact</Link>
           </Li>
         </Ul>
+        <Outlet />
       </LiandH>
         </Right>
       </Wrapper>

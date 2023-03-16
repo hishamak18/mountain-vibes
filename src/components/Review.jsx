@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "../img/hero.jpeg";
+import { Outlet, Link } from "react-router-dom";
+
 
 const Container = styled.div`
   width: 100%;
@@ -18,7 +20,7 @@ const Tittle = styled.h1`
 font-weight: 700!important;
 font-family: "Playfair Display", times, serif;
 margin-bottom: 0.5rem;
-color:black;
+color:white;
 padding-top:20px;
 padding-right:30px;
 font-size:2.90em;
@@ -37,8 +39,8 @@ const Button = styled.button`
 const Review = () => {
   return <Container style={{ backgroundImage: `url(${Image})` }}>
     <div style={{display:'flex'}}>
-    <Tittle>A Best Place To Stay. Reserve Now!</Tittle>
-    <Button>Reserve Now</Button>
+    <Tittle>Reserve Yours!</Tittle>
+    <Button><Link to='/Reservation'>Reserve Now</Link></Button>
     </div>
   </Container>;
 };
