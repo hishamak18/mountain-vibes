@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "../img/hero.jpeg";
+import Image from "../img/hero.jpg";
 import { Outlet, Link } from "react-router-dom";
 
 
@@ -8,19 +8,18 @@ const Container = styled.div`
   width: 100%;
   height: 30vh;
   overflow: hidden;
-  background-position: centre;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background:grey;
   justify-content:center;
   align-items:center;
   display:flex;
+  padding-top:50px;
 `;
 
 const Tittle = styled.h1`
 font-weight: 700!important;
 font-family: "Playfair Display", times, serif;
 margin-bottom: 0.5rem;
-color:white;
+color:rgb(64, 58, 58);
 padding-top:20px;
 padding-right:30px;
 font-size:2.90em;
@@ -37,10 +36,10 @@ const Button = styled.button`
 `
 
 const Review = () => {
-  return <Container style={{ backgroundImage: `url(${Image})` }}>
+  return <Container>
     <div style={{display:'flex'}}>
     <Tittle>Reserve Yours!</Tittle>
-    <Button><Link to='/Reservation'>Reserve Now</Link></Button>
+    <Button><Link to='/Reservation' style={{color:'rgb(64, 58, 58)',textDecoration:'none'}}>Reserve Now</Link></Button>
     </div>
   </Container>;
 };

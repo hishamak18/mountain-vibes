@@ -41,7 +41,7 @@ const Slide = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: #f2f4fb;
+  background: #fff;
 `;
 
 const ImgContainer = styled.div`

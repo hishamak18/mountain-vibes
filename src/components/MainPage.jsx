@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Outlet, Link } from "react-router-dom";
+
 
 const Container = styled.div`
   width: 100%;
@@ -19,7 +21,7 @@ const HeaderMainPage = styled.h1`
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 18px;
-  font-size: 80px;
+  font-size: 65px;
   font-family: "Playfair Display", times, serif;
   color: #fff;
   line-height: 1;
@@ -103,7 +105,7 @@ const MainPage = () => {
           </div>
           <div>
             <h4 style={{ paddingBottom: "16px", color: "white" }}>hii</h4>
-            <Button>Check Availabilty</Button>
+            <Button> <Link to='/AvailableRooms' style={{color:'white',textDecoration:'none'}}>Check Availabilty</Link></Button>
           </div>
         </Checks>
       </Wrapper>

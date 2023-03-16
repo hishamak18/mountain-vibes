@@ -1,161 +1,156 @@
-import { Container } from "@mui/system";
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const Containers = styled.div`
-  width: 100%;
-  display: flex;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-const Wrapper = styled.div`
-  display: flex;
-  gap: 50px;
-`;
 const Form = styled.form`
-  border: 1px solid lightgrey;
-  border-radius: 15px;
-  padding: 20px;
-  background: white;
-`;
-const Input = styled.input`
-  // padding: 0.375rem 0.5rem;
-  // font-size: 2rem;
-  line-height: 2.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 3px solid #ced4da;
-  border-radius: 0.25rem;
-  outline: none;
-  padding:10px;
-`;
-
-const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
-`;
-const WrapUp = styled.div`
-  display: flex;
-  flex-direction: ;
-  gap: 20px;
+  background: white;
+  width: 350px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  overflow:none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+
 `;
 
 const Label = styled.label`
-  font-family: "Roboto", arial, sans-serif;
-  font-size: 20px;
-  line-height: 2.8;
-  font-weight: 700;
+  margin-top: 10px;
+`;
+
+const Input = styled.input`
+  padding: 8px;
+  border: 1px solid #ebe0e0!important;
+  border-radius: 4px;
+  outline:none;
+`;
+const Input1 = styled.input`
+  padding: 8px;
+  border: 1px solid #ebe0e0!important;
+  border-radius: 4px;
+  width:130px;
+  margin-top:15px;
+  outline:none;
+
+`;
+const TextArea = styled.textarea`
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ebe0e0!important;
+  border-radius: 4px;
+  outline:none;
 `;
 
 const Button = styled.button`
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-  padding-right: 3rem !important;
-  padding-left: 3rem !important;
-  font-weight: 700 !important;
+  padding: 10px;
+  background-color: #b59c84;
   color: white;
-  background-color: #ffba5a;
-  font-size: 1.9em;
-  justify-content: center;
-  display: flex;
   border: none;
-  border-radius: 12px;
-`;
-const Address = styled.div`
-  font-family: "Roboto", arial, sans-serif;
-  font-weight: 200;
-  font-size: 16px;
-  line-height: 1.8;
-  text-align: left;
-  lex-wrap: wrap;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size:1.80em;
+  border-radius:4px;
+  font-weight:600;
+
 `;
 
-const Adrs = styled.h3`
-  color: white;
-`;
-
-const Desc = styled.span`
-  font-family: "Playfair Display", times, serif;
-  font-size: 30px;
-`;
-
-const HeaderMainPage = styled.h1`
-  font-size: 2.5em;
-  background: rgba(0, 0, 0, 0.104);
-  color: black;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 18px;
-`;
 const ResortReservationForm = () => {
-  return (
-    <Containers>
-        {/* <HeaderMainPage>Reservation</HeaderMainPage> */}
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [checkIn, setCheckIn] = useState("");
+  const [checkOut, setCheckOut] = useState("");
+  const [adults, setAdults] = useState("");
+  const [children, setChildren] = useState("");
+  const [note, setNote] = useState("");
 
-      <Wrapper>
-        <Form>
-          <WrapUp>
-            <InputWrapper>
-              <Label>Name</Label>
-              <Input style={{width:'307px'}} type={"text"}></Input>
-            </InputWrapper>
-            <InputWrapper>
-              <Label>Phone</Label>
-              <Input style={{width:'307px'}} type={"tel"}></Input>
-            </InputWrapper>
-          </WrapUp>
-          <InputWrapper>
-            <Label>Email</Label>
-            <Input type={"email"}></Input>
-          </InputWrapper>
-          <WrapUp>
-            <InputWrapper>
-              <Label>Date Check In</Label>
-              <Input
-                style={{ padding: "10px 100px 0 80px" }}
-                type={"date"}
-              ></Input>
-            </InputWrapper>
-            <InputWrapper>
-              <Label>Date Check Out</Label>
-              <Input style={{ padding: "10px 95px 0 90px" }} type={"date"}></Input>
-            </InputWrapper>
-          </WrapUp>
-          <WrapUp>
-            <InputWrapper>
-              <Label>Adults</Label>
-              <Input style={{width:'307px'}} type={"number"}></Input>
-            </InputWrapper>
-            <InputWrapper>
-              <Label>Childrens</Label>
-              <Input style={{width:'307px'}} type={"number"}></Input>
-            </InputWrapper>
-          </WrapUp>
-          <InputWrapper>
-            <Label>Notes</Label>
-            <Input type={"text"}></Input>
-          </InputWrapper>
-          <WrapUp style={{padding: "10px" }}>
-            <Button>Reserve Now</Button>
-          </WrapUp>
-        </Form>
-        <Address>
-          <Adrs>Address:</Adrs>
-          <Desc>
-            Kerala Wayanad , <br /> Padinjarathara , <br /> Kuttiyamvayal <br />
-            673575
-          </Desc>
-          <Adrs>Phone:</Adrs>
-          <Desc>+91 9876543210</Desc>
-          <Adrs>Email:</Adrs>
-          <Desc>mountainvibesresort@gmail.com</Desc>
-        </Address>
-      </Wrapper>
-    </Containers>
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // code to submit the form data
+  };
+
+  return (
+    <div>
+    <h1 style={{textAlign:'center',paddingBottom:'30px',color:'#fff'}}>Reservation</h1>
+    <Form onSubmit={handleSubmit}>
+      <Label htmlFor="name">Name *</Label>
+      <Input
+        type="text"
+        id="name"
+        value={name}
+        onChange={(event) => setName(event.target.value)}
+        required
+      />
+
+      <Label htmlFor="phone">Phone *</Label>
+      <Input
+        type="tel"
+        id="phone"
+        value={phone}
+        onChange={(event) => setPhone(event.target.value)}
+        required
+      />
+
+      <Label htmlFor="address">Address *</Label>
+      <Input
+        type="text"
+        id="address"
+        value={address}
+        onChange={(event) => setAddress(event.target.value)}
+        required
+      />
+
+      <Label htmlFor="checkin">Check-in *</Label>
+      <Input
+        type="date"
+        id="checkin"
+        value={checkIn}
+        onChange={(event) => setCheckIn(event.target.value)}
+        required
+      />
+
+      <Label htmlFor="checkout">Check-out *</Label>
+      <Input
+        type="date"
+        id="checkout"
+        value={checkOut}
+        onChange={(event) => setCheckOut(event.target.value)}
+        required
+      />
+      <div style={{display:'flex',justifyContent:'space-between'}}>
+        <div style={{display:'flex',flexDirection:'column'}}>
+
+        <Label htmlFor="adults">Adults *</Label>
+        <Input1
+          type="number"
+          id="adults"
+          value={adults}
+          onChange={(event) => setAdults(event.target.value)}
+          required
+        />
+        </div>
+        <div style={{display:'flex',flexDirection:'column'}}>
+        <Label htmlFor="children">Children *</Label>
+        <Input1
+          type="number"
+          id="children"
+          value={children}
+          onChange={(event) => setChildren(event.target.value)}
+          
+        />
+        </div>
+      </div>
+
+      <Label htmlFor="note">Note</Label>
+      <TextArea
+        id="note"
+        value={note}
+        onChange={(event) => setNote(event.target.value)}
+      />
+
+      <Button type="submit">Reserve </Button>
+    </Form>
+    </div>
+
   );
 };
 

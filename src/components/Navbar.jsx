@@ -7,7 +7,7 @@ import { Outlet, Link } from "react-router-dom";
 const Container = styled.div`
   // color:white;
   height: 60px;
-  background-color: white;
+  background: transparent;
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -29,12 +29,18 @@ const Wrapper = styled.div`
 const Centre = styled.div`
   float: left;
   flex: 1;
+  display:flex;
 `;
 const Middle = styled.h1`
-  flex: 1;
+  font-family:fantacy;
   color: #f48220;
   color: #403a3a;
-`;
+  font-size:1.6em;
+  align-items:center;
+  justify-content:center;
+  margin-top: 31px;
+  margin-left:8px;
+  `;
 const Logo = styled.img`
   height: 60px;
 `;
@@ -65,24 +71,24 @@ const NavBar = () => {
   return (
     <Container>
       <Wrapper>
-        <Centre>
+        <Centre >
           <Logo src={Logos} />
+        {/* <Middle>Mountain Vibes.</Middle> */}
         </Centre>
-        <Middle>MountainVibes.</Middle>
         <Right>
         <LiandH>
         <Ul>
           <Li>
-          <Link style={{color:'black',textDecoration:'none',fontSize:'1.6em'}}  to="/">Home</Link>
+          <Link style={{color:'black',textDecoration:'none',fontSize:'1.2em'}}  to="/">Home</Link>
           </Li>
           <Li>
-          <Link style={{color:'black',textDecoration:'none',fontSize:'1.6em'}}  to="/Reservation">About</Link>
+          <Link style={{color:'black',textDecoration:'none',fontSize:'1.2em'}}  to="/Reservation">About</Link>
           </Li>
           <Li>
-          <Link style={{color:'black',textDecoration:'none',fontSize:'1.6em'}}  to="/Reservation">Reservation</Link>
+          <Link style={{color:'black',textDecoration:'none',fontSize:'1.2em'}}  to="/Reservation">Reservation</Link>
           </Li>
           <Li>
-          <Link style={{color:'black',textDecoration:'none',fontSize:'1.6em'}}  to="/Reservation">Contact</Link>
+          <Link style={{color:'black',textDecoration:'none',fontSize:'1.2em'}}  to="/Reservation">Contact</Link>
           </Li>
         </Ul>
         <Outlet />

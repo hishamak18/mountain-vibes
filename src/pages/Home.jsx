@@ -7,7 +7,7 @@ import Photos from '../components/Photos'
 import Review from '../components/Review'
 import RoomsAndSuits from '../components/RoomsAndSuits'
 import Wellcome from '../components/Wellcome'
-import Image from '../img/hero.jpeg'
+import Image from '../img/hero.jpg'
 
 
 const Wrapper = styled.div`
@@ -25,7 +25,6 @@ const Home = () => {
       <MainPage/>
     </Wrapper>
       <Wellcome/>
-      <RoomsAndSuits/>
       <Photos/>
       <Review/>
       <Footer/>
