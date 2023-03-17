@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Outlet, Link } from "react-router-dom";
 
-
 const Container = styled.div`
   width: 100%;
   height: 100vh;
@@ -15,15 +14,13 @@ const Container = styled.div`
 `;
 
 const HeaderMainPage = styled.h1`
-  font-size: 2.5em;
-  background: rgba(0, 0, 0, 0.104);
-  color: white;
+  background: rgb(255 255 255 / 63%);
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 18px;
+  border-radius: 0px;
   font-size: 65px;
   font-family: "Playfair Display", times, serif;
-  color: #fff;
+  color: rgb(0 0 0 / 76%);
   line-height: 1;
   font-weight: bold;
 `;
@@ -35,7 +32,8 @@ const Wrapper = styled.div`
   border-radius: 10px;
   font-family: sans-serif;
   position: absolute;
-  bottom: -60px;`;
+  bottom: -60px;
+`;
 const Checks = styled.div`
   padding: 20px;
   display: flex;
@@ -46,29 +44,31 @@ const Input = styled.input`
   border: none;
   width: 250px;
   border: 1px solid lightgrey;
-  outline:1px solid lightgrey;
-    border-radius:4px;
-  `;
-  const InputNum = styled.input`
+  outline: 1px solid lightgrey;
+  border-radius: 4px;
+`;
+const InputNum = styled.input`
   width: 120px;
-  outline:1px solid lightgrey;
-  border-radius:4px;
+  outline: 1px solid lightgrey;
+  border-radius: 4px;
   padding: 15px;
   border: none;
   border: 1px solid lightgrey;
 `;
 const Button = styled.button`
-  background: grey;
-    background:#f48220;
+  background: rgb(15 44 15);
   border: none;
   height: max-content;
   width: 200px;
   padding: 10px;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
   color: white;
   font-size: 1.09em;
+  font-weight: 800;
   border-radius: 15px;
 `;
 
@@ -105,7 +105,15 @@ const MainPage = () => {
           </div>
           <div>
             <h4 style={{ paddingBottom: "16px", color: "white" }}>hii</h4>
-            <Button> <Link to='/AvailableRooms' style={{color:'white',textDecoration:'none'}}>Check Availabilty</Link></Button>
+            <Button>
+              {" "}
+              <Link
+                to="/AvailableRooms"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Check Availabilty
+              </Link>
+            </Button>
           </div>
         </Checks>
       </Wrapper>

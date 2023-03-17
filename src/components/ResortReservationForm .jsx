@@ -5,12 +5,13 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   background: white;
-  width: 350px;
+  height: 700px;
+  width: 400px;
   padding: 10px 30px;
   border-radius: 10px;
-  overflow:none;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-
+  overflow: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: none;
 `;
 
 const Label = styled.label`
@@ -18,39 +19,40 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  padding: 8px;
-  border: 1px solid #ebe0e0!important;
+  padding: 15px 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: none;
   border-radius: 4px;
-  outline:none;
+  outline: none;
 `;
 const Input1 = styled.input`
-  padding: 8px;
-  border: 1px solid #ebe0e0!important;
+  padding: 15px 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: none;
   border-radius: 4px;
-  width:130px;
-  margin-top:15px;
-  outline:none;
-
+  width: 130px;
+  margin-top: 15px;
+  outline: none;
 `;
 const TextArea = styled.textarea`
-  padding: 5px;
+  padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ebe0e0!important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: none;
   border-radius: 4px;
-  outline:none;
+  outline: none;
 `;
 
 const Button = styled.button`
   padding: 10px;
-  background-color: #b59c84;
+  background-color: #1a4a45;
   color: white;
   border: none;
   margin-top: 10px;
   cursor: pointer;
-  font-size:1.80em;
-  border-radius:4px;
-  font-weight:600;
-
+  font-size: 1.8em;
+  border-radius: 4px;
+  font-weight: 600;
 `;
 
 const ResortReservationForm = () => {
@@ -70,87 +72,92 @@ const ResortReservationForm = () => {
 
   return (
     <div>
-    <h1 style={{textAlign:'center',paddingBottom:'30px',color:'#fff'}}>Reservation</h1>
-    <Form onSubmit={handleSubmit}>
-      <Label htmlFor="name">Name *</Label>
-      <Input
-        type="text"
-        id="name"
-        value={name}
-        onChange={(event) => setName(event.target.value)}
-        required
-      />
-
-      <Label htmlFor="phone">Phone *</Label>
-      <Input
-        type="tel"
-        id="phone"
-        value={phone}
-        onChange={(event) => setPhone(event.target.value)}
-        required
-      />
-
-      <Label htmlFor="address">Address *</Label>
-      <Input
-        type="text"
-        id="address"
-        value={address}
-        onChange={(event) => setAddress(event.target.value)}
-        required
-      />
-
-      <Label htmlFor="checkin">Check-in *</Label>
-      <Input
-        type="date"
-        id="checkin"
-        value={checkIn}
-        onChange={(event) => setCheckIn(event.target.value)}
-        required
-      />
-
-      <Label htmlFor="checkout">Check-out *</Label>
-      <Input
-        type="date"
-        id="checkout"
-        value={checkOut}
-        onChange={(event) => setCheckOut(event.target.value)}
-        required
-      />
-      <div style={{display:'flex',justifyContent:'space-between'}}>
-        <div style={{display:'flex',flexDirection:'column'}}>
-
-        <Label htmlFor="adults">Adults *</Label>
-        <Input1
-          type="number"
-          id="adults"
-          value={adults}
-          onChange={(event) => setAdults(event.target.value)}
+      <Form onSubmit={handleSubmit}>
+        <h1
+          style={{
+            textAlign: "center",
+            paddingBottom: "30px",
+            color: "#1a4a45",
+          }}
+        >
+          Reservation
+        </h1>
+        <Label htmlFor="name">Name *</Label>
+        <Input
+          type="text"
+          id="name"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
           required
         />
-        </div>
-        <div style={{display:'flex',flexDirection:'column'}}>
-        <Label htmlFor="children">Children *</Label>
-        <Input1
-          type="number"
-          id="children"
-          value={children}
-          onChange={(event) => setChildren(event.target.value)}
-          
+
+        <Label htmlFor="phone">Phone *</Label>
+        <Input
+          type="tel"
+          id="phone"
+          value={phone}
+          onChange={(event) => setPhone(event.target.value)}
+          required
         />
+
+        <Label htmlFor="address">Address *</Label>
+        <Input
+          type="text"
+          id="address"
+          value={address}
+          onChange={(event) => setAddress(event.target.value)}
+          required
+        />
+
+        <Label htmlFor="checkin">Check-in *</Label>
+        <Input
+          type="date"
+          id="checkin"
+          value={checkIn}
+          onChange={(event) => setCheckIn(event.target.value)}
+          required
+        />
+
+        <Label htmlFor="checkout">Check-out *</Label>
+        <Input
+          type="date"
+          id="checkout"
+          value={checkOut}
+          onChange={(event) => setCheckOut(event.target.value)}
+          required
+        />
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <Label htmlFor="adults">Adults *</Label>
+            <Input1
+              type="number"
+              id="adults"
+              value={adults}
+              onChange={(event) => setAdults(event.target.value)}
+              required
+            />
+          </div>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <Label htmlFor="children">Children *</Label>
+            <Input1
+              type="number"
+              id="children"
+              value={children}
+              onChange={(event) => setChildren(event.target.value)}
+            />
+          </div>
         </div>
-      </div>
 
-      <Label htmlFor="note">Note</Label>
-      <TextArea
-        id="note"
-        value={note}
-        onChange={(event) => setNote(event.target.value)}
-      />
+        <Label htmlFor="note">Note</Label>
+        <TextArea
+          id="note"
+          value={note}
+          onChange={(event) => setNote(event.target.value)}
+        />
 
-      <Button type="submit">Reserve </Button>
-    </Form>
+        <Button type="submit">Reserve </Button>
+      </Form>
     </div>
-
   );
 };
 

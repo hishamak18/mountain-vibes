@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Logos from "../img/logoHero.png";
 import { Outlet, Link } from "react-router-dom";
 
-
 const Container = styled.div`
   // color:white;
   height: 60px;
@@ -29,24 +28,24 @@ const Wrapper = styled.div`
 const Centre = styled.div`
   float: left;
   flex: 1;
-  display:flex;
+  display: flex;
 `;
 const Middle = styled.h1`
-  font-family:fantacy;
+  flex: 1;
+  font-family: fantacy;
   color: #f48220;
   color: #403a3a;
-  font-size:1.6em;
-  align-items:center;
-  justify-content:center;
-  margin-top: 31px;
-  margin-left:8px;
-  `;
+  font-size: 1.6em;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+`;
 const Logo = styled.img`
   height: 60px;
 `;
 const Right = styled.div`
-float:right;
-`
+  float: right;
+`;
 const LiandH = styled.div``;
 const Ul = styled.ul`
   display: flex;
@@ -71,28 +70,68 @@ const NavBar = () => {
   return (
     <Container>
       <Wrapper>
-        <Centre >
+        <Centre>
           <Logo src={Logos} />
-        {/* <Middle>Mountain Vibes.</Middle> */}
         </Centre>
+        <Middle>Mountain Vibes.</Middle>
         <Right>
-        <LiandH>
-        <Ul>
-          <Li>
-          <Link style={{color:'black',textDecoration:'none',fontSize:'1.2em'}}  to="/">Home</Link>
-          </Li>
-          <Li>
-          <Link style={{color:'black',textDecoration:'none',fontSize:'1.2em'}}  to="/Reservation">About</Link>
-          </Li>
-          <Li>
-          <Link style={{color:'black',textDecoration:'none',fontSize:'1.2em'}}  to="/Reservation">Reservation</Link>
-          </Li>
-          <Li>
-          <Link style={{color:'black',textDecoration:'none',fontSize:'1.2em'}}  to="/Reservation">Contact</Link>
-          </Li>
-        </Ul>
-        <Outlet />
-      </LiandH>
+          <LiandH>
+            <Ul>
+              <Li>
+                <Link
+                  style={{
+                    color: "rgb(15 44 15)",
+                    textDecoration: "none",
+                    fontSize: "1.2em",
+                    fontWeight: "bold",
+                  }}
+                  to="/"
+                >
+                  Home
+                </Link>
+              </Li>
+              <Li>
+                <Link
+                  style={{
+                    color: "rgb(15 44 15)",
+                    textDecoration: "none",
+                    fontSize: "1.2em",
+                    fontWeight: "bold",
+                  }}
+                  to="/About"
+                >
+                  About
+                </Link>
+              </Li>
+              <Li>
+                <Link
+                  style={{
+                    color: "rgb(15 44 15)",
+                    textDecoration: "none",
+                    fontSize: "1.2em",
+                    fontWeight: "bold",
+                  }}
+                  to="/Reservation"
+                >
+                  Reservation
+                </Link>
+              </Li>
+              <Li>
+                <Link
+                  style={{
+                    color: "rgb(15 44 15)",
+                    textDecoration: "none",
+                    fontSize: "1.2em",
+                    fontWeight: "bold",
+                  }}
+                  to="/Contact"
+                >
+                  Contact
+                </Link>
+              </Li>
+            </Ul>
+            <Outlet />
+          </LiandH>
         </Right>
       </Wrapper>
     </Container>

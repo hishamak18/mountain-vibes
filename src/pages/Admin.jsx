@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 const Admin = () => {
   const [formData, setFormData] = useState({
-    roomType: '',
-    availableRooms: '',
+    roomType: "",
+    availableRooms: "",
   });
 
   const handleChange = (e) => {
@@ -14,9 +14,9 @@ const Admin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/api/rooms', formData);
-      setFormData({ roomType: '', availableRooms: '' });
-      alert('Room availability updated!');
+      await axios.post("/api/rooms", formData);
+      setFormData({ roomType: "", availableRooms: "" });
+      alert("Room availability updated!");
     } catch (err) {
       console.error(err);
     }

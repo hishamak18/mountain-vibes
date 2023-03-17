@@ -1,7 +1,9 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./pages/About";
 import Admin from "./pages/Admin";
 import AvailableRooms from "./pages/AvailableRoom";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Resevation from "./pages/Resevation";
 
@@ -14,6 +16,10 @@ export default function App() {
           <Route path="/Reservation"Component={Resevation} />
           <Route path="/Admin"Component={Admin} />
           <Route path="/AvailableRooms"Component={AvailableRooms} />
+          <Route path="/Contact"Component={Contact} />
+          <Route path="/About"Component={About} />
+
+
 
 
       </Routes>
