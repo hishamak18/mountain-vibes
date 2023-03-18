@@ -10,8 +10,14 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-`;
+  background-position: centre;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://images.pexels.com/photos/3222686/pexels-photo-3222686.jpeg?auto=compress&cs=tinysrgb&w=1600");
+
+  @media (max-width: 480px) {
+
+  }`;
 
 const HeaderMainPage = styled.h1`
   background: rgb(255 255 255 / 63%);
@@ -23,6 +29,13 @@ const HeaderMainPage = styled.h1`
   color: rgb(0 0 0 / 76%);
   line-height: 1;
   font-weight: bold;
+  @media (max-width: 480px) {
+    font-size: 25px;
+    padding:10px 20px;
+    position:absolute;
+    top:60px;
+
+  }
 `;
 
 const Wrapper = styled.div`
@@ -33,11 +46,25 @@ const Wrapper = styled.div`
   font-family: sans-serif;
   position: absolute;
   bottom: -60px;
+  @media (max-width: 480px) {
+    background: rgb(255 255 255 / 63%);
+    margin-bottom:70px;
+    position:absolute;
+    bottom:35px;
+  }
 `;
 const Checks = styled.div`
   padding: 20px;
   display: flex;
   gap: 30px;
+  @media (max-width: 480px) {
+    display:flex;
+    flex-direction:column;
+    gap: 0px;
+    padding: 10px;
+    
+
+  }
 `;
 const Input = styled.input`
   padding: 15px;
@@ -46,6 +73,10 @@ const Input = styled.input`
   border: 1px solid lightgrey;
   outline: 1px solid lightgrey;
   border-radius: 4px;
+  @media (max-width: 480px) {
+    padding: 8px;
+  }
+
 `;
 const InputNum = styled.input`
   width: 120px;
@@ -54,6 +85,10 @@ const InputNum = styled.input`
   padding: 15px;
   border: none;
   border: 1px solid lightgrey;
+  @media (max-width: 480px) {
+    padding: 8px;
+    width: auto;
+  }
 `;
 const Button = styled.button`
   background: rgb(15 44 15);
@@ -70,11 +105,16 @@ const Button = styled.button`
   font-size: 1.09em;
   font-weight: 800;
   border-radius: 15px;
+  @media (max-width: 480px) {
+    border-radius: 6px;
+    margin-left:25px;
+  }
 `;
 
 const MainPage = () => {
   return (
     <Container>
+      <>
       <HeaderMainPage> Best Place To Stay In Wayanad</HeaderMainPage>
 
       <Wrapper>
@@ -104,7 +144,7 @@ const MainPage = () => {
             <InputNum type="number" />
           </div>
           <div>
-            <h4 style={{ paddingBottom: "16px", color: "white" }}>hii</h4>
+            <h4 style={{ paddingBottom: "16px", color: "white" }}></h4>
             <Button>
               {" "}
               <Link
@@ -117,6 +157,7 @@ const MainPage = () => {
           </div>
         </Checks>
       </Wrapper>
+      </>
     </Container>
   );
 };

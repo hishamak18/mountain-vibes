@@ -7,15 +7,17 @@ const Container = styled.div`
   // color:white;
   height: 60px;
   background: transparent;
-  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
+  @media (max-width: 480px) {
+    
+  }
 `;
 const Wrapper = styled.div`
   box-shadow: 0 24px 20px -16px rgba(0, 0, 0, 0.1);
   background-color: white;
-  width: 100%;
+  width:100%;
   padding: 10px 20px;
   display: flex;
   // overflow:hidden;
@@ -25,26 +27,36 @@ const Wrapper = styled.div`
   z-index: 1;
   top: 0;
 `;
-const Centre = styled.div`
-  float: left;
+const Centre = styled.h1`
   flex: 1;
-  display: flex;
-`;
-const Middle = styled.h1`
-  flex: 1;
-  font-family: fantacy;
+  font-family: serif!important;
   color: #f48220;
   color: #403a3a;
   font-size: 1.6em;
   align-items: center;
   justify-content: center;
   margin-left: 8px;
+  @media (max-width: 480px){
+    font-size: 1.3em;
+  }
+`;
+const Middle = styled.div`
+flex: end;
+display: flex;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 const Logo = styled.img`
   height: 60px;
+  @media (max-width: 480px) {
+    height: 40px;
+  }
 `;
 const Right = styled.div`
   float: right;
+  flex:1;
 `;
 const LiandH = styled.div``;
 const Ul = styled.ul`
@@ -70,11 +82,11 @@ const NavBar = () => {
   return (
     <Container>
       <Wrapper>
-        <Centre>
-          <Logo src={Logos} />
-        </Centre>
-        <Middle>Mountain Vibes.</Middle>
         <Right>
+          <Logo src={Logos} />
+        </Right>
+        <Centre>Mountain Vibes.</Centre>
+        <Middle>
           <LiandH>
             <Ul>
               <Li>
@@ -132,7 +144,7 @@ const NavBar = () => {
             </Ul>
             <Outlet />
           </LiandH>
-        </Right>
+        </Middle>
       </Wrapper>
     </Container>
   );

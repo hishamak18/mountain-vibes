@@ -13,6 +13,10 @@ const Container = styled.div`
   display: flex;
   background: #403a3a;
   color: white;
+  z-index:1;
+  @media (max-width: 480px) {
+    flex-direction:column;
+  }
 `;
 const Left = styled.div`
   flex: 1;
@@ -20,9 +24,13 @@ const Left = styled.div`
   flex-direction: column;
   padding: 20px;
   // background:red;
+  
 `;
 const Logo = styled.h1`
   cursor: pointer;
+  @media (max-width: 480px) {
+    font-size:20px;
+  }
 `;
 
 const Desc = styled.p`
@@ -31,6 +39,9 @@ const Desc = styled.p`
 
 const Social = styled.div`
   display: flex;
+  @media (max-width: 480px) {
+    margin-left: -15px;
+  }
 `;
 
 const SocialIcon = styled.div`
@@ -47,12 +58,21 @@ const SocialIcon = styled.div`
   &:hover {
     transform: scale(1.1);
   }
+  @media (max-width: 480px) {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const Center = styled.div`
   flex: 1;
   padding: 20px;
   margin-left: 193px;
+  @media (max-width: 480px) {
+    margin-left: 0px;
+    display:none;
+
+  }
 
 `;
 const Right = styled.div`
@@ -62,6 +82,7 @@ const Right = styled.div`
 `;
 const Tittle = styled.h3`
   margin-bottom: 30px;
+
 `;
 const List = styled.ul`
   margin: 0;
@@ -88,6 +109,7 @@ const Payment = styled.img`
 const Footer = () => {
   return (
     <Container>
+      <>
       <Left>
         <Logo>MountainVibes.</Logo>
         <Desc>
@@ -134,7 +156,9 @@ const Footer = () => {
           mountainvibesresort@gmail.com
         </ContactItem>
       </Right>
+    </>
     </Container>
+
   );
 };
 

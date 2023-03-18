@@ -8,12 +8,32 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  @media (max-width: 480px) {
+    justify-content:space-between;
+  }
 `;
+const  Wrap =styled.div`
+display: flex;
+justifyContent:center;
+align-items:center;
+gap:20px;
+
+@media (max-width: 480px) {
+  flex-direction:column;
+}
+
+`
+
 const Tittle = styled.h1`
   text-align: center;
   font-size: 60px;
   font-family: "Playfair Display", times, serif;
   font-weight: 700;
+  @media (max-width: 480px) {
+    font-size: 20px;
+    margin-top:50px;
+    padding-bottom:20px;
+  }
 `;
 
 const P = styled.p`
@@ -30,16 +50,27 @@ const P = styled.p`
   font-size: 16px;
   line-height: 1.8;
   padding-bottom: 20px;
+  @media (max-width: 480px) {
+    display:none;
+  }
 `;
 const Rooms = styled.div``;
 const Image = styled.img`
   height: 300px;
+  @media (max-width: 480px) {
+    height: 280px;
+    padding:10px;
+  }
 `;
 const RoomTittle = styled.h2`
 text-align:center;
 font-size: 2rem;
 color: #000;
 font-family: "Playfair Display", times, serif;
+@media (max-width: 480px) {
+  font-size: 1rem;
+
+}
 
 }
 `;
@@ -50,7 +81,22 @@ const RoomsRate = styled.span`
   font-size: 18px;
   line-height: 1.8;
   text-align: center;
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    line-height:1.2;
+  }
 `;
+const Div =styled.div`
+  display:flex;
+  flex-direction:column;
+  @media (max-width: 480px) {
+    display:flex;
+  flex-direction:row;
+  gap:15px;
+  }
+
+  
+`
 
 const AvailRooms = () => {
   return (
@@ -65,7 +111,7 @@ const AvailRooms = () => {
           vero voluptates est nihil consequatur sapiente fugiat?
         </P>
       </div>
-      <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+      <Wrap >
         {RoomImg.map((item) => {
           return (
             <Rooms>
@@ -78,13 +124,15 @@ const AvailRooms = () => {
                   flexDirection: "column",
                 }}
               >
+                <Div>
                 <RoomTittle>{item.tittle}</RoomTittle>
                 <RoomsRate>{item.price}</RoomsRate>
+                </Div>
               </div>
             </Rooms>
           );
         })}
-      </div>
+      </Wrap>
     </Container>
   );
 };

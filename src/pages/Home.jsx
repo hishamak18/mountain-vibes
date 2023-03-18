@@ -10,12 +10,14 @@ import Wellcome from "../components/Wellcome";
 import Image from "../img/hero.jpg";
 
 const Wrapper = styled.div`
-  background-position: centre;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("https://images.pexels.com/photos/3222686/pexels-photo-3222686.jpeg?auto=compress&cs=tinysrgb&w=1600");
+ 
+  @media (max-width: 480px) {
+    width:100%;
+  }
 `;
-const Container = styled.div``;
+const Container = styled.div`
+
+`
 
 const Home = () => {
   return (

@@ -10,6 +10,9 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+  @media (max-width: 480px) {
+    height: 60vh;
+  }
 `;
 const Arrow = styled.div`
   width: 100px;
@@ -28,12 +31,20 @@ const Arrow = styled.div`
   cursor: pointer;
   opacity: 0.5;
   z-index: 2;
+  @media (max-width: 480px) {
+    width: 10px;
+    height: 10px;
+  }
+ 
 `;
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
   transition: all 1s ease;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
+  @media (max-width: 480px) {
+    height:auto;
+  }
 `;
 const Slide = styled.div`
   width: 100vw;
@@ -50,6 +61,10 @@ const ImgContainer = styled.div`
   justify-content: center;
   height: 100%;
   flex: 1;
+  @media (max-width: 480px) {
+    align-items: unset;
+    
+  }
 `;
 
 const Tittle = styled.h1`
@@ -63,6 +78,11 @@ const Tittle = styled.h1`
 const Image = styled.img`
   height: 60%;
   border-radius: 8px;
+  @media (max-width: 480px) {
+    height: 20%;
+    border-radius: 4px;
+
+  }
 `;
 const TittleH = styled.h1`
   font-size: 70px;
@@ -96,7 +116,6 @@ const Photos = () => {
                   <ImgContainer>
                     <Image src={item.img} />
 
-                    <Tittle>{item.tittle}</Tittle>
                   </ImgContainer>
                 </div>
               </Slide>
