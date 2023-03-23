@@ -12,6 +12,11 @@ const Form = styled.form`
   overflow: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border: none;
+  @media (max-width: 480px) {
+    width: 350px;
+    height: max-content;
+
+  }
 `;
 
 const Label = styled.label`
@@ -24,6 +29,9 @@ const Input = styled.input`
   border: none;
   border-radius: 4px;
   outline: none;
+  @media (max-width: 480px) {
+    padding: 10px 5px;
+  }
 `;
 const Input1 = styled.input`
   padding: 15px 10px;
@@ -33,6 +41,10 @@ const Input1 = styled.input`
   width: 130px;
   margin-top: 15px;
   outline: none;
+  @media (max-width: 480px) {
+    padding: 10px 5px;
+
+  }
 `;
 const TextArea = styled.textarea`
   padding: 10px;
@@ -41,6 +53,10 @@ const TextArea = styled.textarea`
   border: none;
   border-radius: 4px;
   outline: none;
+  @media (max-width: 480px) {
+ padding:5px;
+
+  }
 `;
 
 const Button = styled.button`

@@ -3,7 +3,12 @@ import styled from "styled-components";
 
 const AboutContainer = styled.div`
   background-color: #f7f7f7;
-  padding: 50px;
+  padding: 20px;
+  @media (max-width: 480px) {
+    width: 350px;
+    // height:700px;
+
+  }
 `;
 
 const AboutTitle = styled.h2`
@@ -18,6 +23,8 @@ const AboutText = styled.p`
   line-height: 1.5;
   color: #555;
   margin-bottom: 30px;
+  @media (max-width: 480px) {
+  }
 `;
 
 const AboutList = styled.ul`
@@ -52,6 +59,7 @@ const AboutListItemText = styled.p`
 const AboutUs = () => {
   return (
     <AboutContainer>
+      <>
       <AboutTitle>About Us</AboutTitle>
       <AboutText>
         Welcome to our beautiful resort, where luxury and relaxation meet. Our
@@ -61,6 +69,7 @@ const AboutUs = () => {
         range of amenities and activities <br />
         to ensure that your stay with us is nothing short of exceptional.
       </AboutText>
+      </>
       <AboutList>
         <AboutListItem>
           <AboutListItemIcon>1</AboutListItemIcon>

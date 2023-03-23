@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ResortReservationForm from "../components/ResortReservationForm ";
+import MobileMenu from "../components/MobileMenu"
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -23,6 +24,7 @@ const Reservation = () => {
   return (
     <Container>
       <Navbar />
+      <MobileMenu/>
       <Wrapper>
         <ResortReservationForm />
       </Wrapper>

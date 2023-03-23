@@ -32,7 +32,7 @@ const Arrow = styled.div`
   opacity: 0.5;
   z-index: 2;
   @media (max-width: 480px) {
-    width: 3 0px;
+    width: 30px;
     height: 30px;
   }
  

@@ -8,6 +8,7 @@ import Review from "../components/Review";
 import RoomsAndSuits from "../components/RoomsAndSuits";
 import Wellcome from "../components/Wellcome";
 import {images} from "../data";
+import MobileMenu from "../components/MobileMenu"
 
 const Wrapper = styled.div`
  
@@ -23,6 +24,7 @@ const Home = () => {
   return (
     <Container>
       <Wrapper>
+      <MobileMenu/>
         <Navbar />
         <MainPage />
       </Wrapper>

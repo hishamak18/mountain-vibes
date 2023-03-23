@@ -4,6 +4,8 @@ import AvailRooms from "../components/AvailRooms";
 import Footer from "../components/Footer";
 import NavBar from "../components/Navbar";
 import Review from "../components/Review";
+import MobileMenu from "../components/MobileMenu"
+
 
 
 const Container = styled.div`
@@ -21,6 +23,7 @@ const AvailableRooms = ()=>{
     return (
         <div>
             <NavBar/>
+            <MobileMenu/>
            <Container>
            <AvailRooms/>
            </Container>

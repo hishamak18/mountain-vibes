@@ -8,14 +8,16 @@ import {
   Twitter,
 } from "@mui/icons-material";
 import styled from "styled-components";
+import { Outlet, Link } from "react-router-dom";
+
 
 const Container = styled.div`
   display: flex;
   background: #403a3a;
   color: white;
-  z-index:1;
+  z-index: 1;
   @media (max-width: 480px) {
-    flex-direction:column;
+    flex-direction: column;
   }
 `;
 const Left = styled.div`
@@ -24,12 +26,11 @@ const Left = styled.div`
   flex-direction: column;
   padding: 20px;
   // background:red;
-  
 `;
 const Logo = styled.h1`
   cursor: pointer;
   @media (max-width: 480px) {
-    font-size:20px;
+    font-size: 20px;
   }
 `;
 
@@ -70,19 +71,15 @@ const Center = styled.div`
   margin-left: 193px;
   @media (max-width: 480px) {
     margin-left: 0px;
-    display:none;
-
+    display: none;
   }
-
 `;
 const Right = styled.div`
   flex: 1;
   padding: 20px;
-  
 `;
 const Tittle = styled.h3`
   margin-bottom: 30px;
-
 `;
 const List = styled.ul`
   margin: 0;
@@ -110,55 +107,102 @@ const Footer = () => {
   return (
     <Container>
       <>
-      <Left>
-        <Logo>MountainVibes.</Logo>
-        <Desc>
-        Welcome to our beautiful resort, where luxury and relaxation meet. Our
-        resort is located in a serene and picturesque setting,
-        <br />
-        surrounded by lush greenery and crystal clear waters. We offer a wide
-        range of amenities and activities <br />
-        to ensure that your stay with us is nothing short of exceptional.
-        </Desc>
-        <Social>
-          <SocialIcon color="3B5999">
-            <Instagram />
-          </SocialIcon>
-          <SocialIcon color="55ACEE">
-            <Twitter />
-          </SocialIcon>
-          <SocialIcon color="3B5999">
-            <Facebook />
-          </SocialIcon>
-        </Social>
-      </Left>
-      <Center>
-        <Tittle>Useful Links</Tittle>
-        <List>
-          <ListItem>Home</ListItem>
-          <ListItem>About</ListItem>
-          <ListItem> Reservation</ListItem>
-          <ListItem>Contact</ListItem>
-        </List>
-      </Center>
-      <Right>
-        <Tittle>Contact</Tittle>
-        <ContactItem>
-          <Room style={{ marginRight: "10px" }} className="icn" />
-          India , Kerala
-        </ContactItem>
-        <ContactItem>
-          <Phone style={{ marginRight: "10px" }} className="icn" />
-          +91 9876543210
-        </ContactItem>
-        <ContactItem>
-          <Mail style={{ marginRight: "10px" }} className="icn" />
-          mountainvibesresort@gmail.com
-        </ContactItem>
-      </Right>
-    </>
+        <Left>
+          <Logo>MountainVibes.</Logo>
+          <Desc>
+            Welcome to our beautiful resort, where luxury and relaxation meet.
+            Our resort is located in a serene and picturesque setting,
+            <br />
+            surrounded by lush greenery and crystal clear waters. We offer a
+            wide range of amenities and activities <br />
+            to ensure that your stay with us is nothing short of exceptional.
+          </Desc>
+          <Social>
+            <SocialIcon color="3B5999">
+              <Instagram />
+            </SocialIcon>
+            <SocialIcon color="55ACEE">
+              <Twitter />
+            </SocialIcon>
+            <SocialIcon color="3B5999">
+              <Facebook />
+            </SocialIcon>
+          </Social>
+        </Left>
+        <Center>
+          <Tittle>Useful Links</Tittle>
+          <List>
+            <ListItem>
+              <Link
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontSize: "1.2em",
+                  fontWeight: "bold",
+                }}
+                to="/"
+              >
+                Home
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontSize: "1.2em",
+                  fontWeight: "bold",
+                }}
+                to="/About"
+              >
+                About
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontSize: "1.2em",
+                  fontWeight: "bold",
+                }}
+                to="/Reservation"
+              >
+                Reservation
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontSize: "1.2em",
+                  fontWeight: "bold",
+                }}
+                to="/Contact"
+              >
+                Contact
+              </Link>
+            </ListItem>
+          </List>
+        </Center>
+        <Right>
+          <Tittle>Contact</Tittle>
+          <ContactItem>
+            <Room style={{ marginRight: "10px" }} className="icn" />
+            India , Kerala
+          </ContactItem>
+          <ContactItem>
+            <Phone style={{ marginRight: "10px" }} className="icn" />
+            +91 9876543210
+          </ContactItem>
+          <ContactItem>
+            <Mail style={{ marginRight: "10px" }} className="icn" />
+            mountainvibesresort@gmail.com
+          </ContactItem>
+        </Right>
+      </>
     </Container>
-
   );
 };
 

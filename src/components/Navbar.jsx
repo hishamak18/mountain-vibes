@@ -37,7 +37,9 @@ const Centre = styled.h1`
   justify-content: center;
   margin-left: 8px;
   @media (max-width: 480px){
-    font-size: 1.3em;
+    font-size: 1.2em;
+    // margin-right:140px;
+    margin-right:10px;
   }
 `;
 const Middle = styled.div`
