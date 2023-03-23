@@ -1,7 +1,7 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 import { useState } from "react";
 import styled from "styled-components";
-import RoomImg from "../data";
+import {RoomImg} from "../data";
 import "../style.css";
 
 const Container = styled.div`
@@ -11,7 +11,7 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   @media (max-width: 480px) {
-    height: 60vh;
+    height: 30vh;
   }
 `;
 const Arrow = styled.div`
@@ -32,8 +32,8 @@ const Arrow = styled.div`
   opacity: 0.5;
   z-index: 2;
   @media (max-width: 480px) {
-    width: 10px;
-    height: 10px;
+    width: 3 0px;
+    height: 30px;
   }
  
 `;
@@ -43,6 +43,7 @@ const Wrapper = styled.div`
   transition: all 1s ease;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
   @media (max-width: 480px) {
+    padding-top:50px;
     height:auto;
   }
 `;
@@ -90,6 +91,9 @@ const TittleH = styled.h1`
   font-size: 60px;
   font-family: "Playfair Display", times, serif;
   font-weight: 700;
+  @media (max-width: 480px) {
+    display:none;
+  }
 `;
 const Photos = () => {
   const [slideIndex, setSlideIndex] = useState(0);

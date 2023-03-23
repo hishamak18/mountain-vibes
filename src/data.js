@@ -1,4 +1,4 @@
- const RoomImg=[
+ export const RoomImg=[
     {
         img:"https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1600",
         tittle:"Single Room"
@@ -15,4 +15,11 @@
         ,price:"1500INR/DAY"
     }
 ]
-export default RoomImg
+
+ export const images = [
+    { src: 'https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1600', alt: 'Image 1' },
+    { src: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1600', alt: 'Image 2' },
+    { src: 'https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1600', alt: 'Image 3' },
+    { src: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1600', alt: 'Image 4' },
+  ];
+  

@@ -7,7 +7,7 @@ import Photos from "../components/Photos";
 import Review from "../components/Review";
 import RoomsAndSuits from "../components/RoomsAndSuits";
 import Wellcome from "../components/Wellcome";
-import Image from "../img/hero.jpg";
+import {images} from "../data";
 
 const Wrapper = styled.div`
  
@@ -27,7 +27,7 @@ const Home = () => {
         <MainPage />
       </Wrapper>
       <Wellcome />
-      <Photos />
+      <Photos/>
       <Review />
       <Footer />
     </Container>

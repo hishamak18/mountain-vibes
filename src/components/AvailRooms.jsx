@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import RoomImg from "../data";
+import {RoomImg} from "../data";
 
 const Container = styled.div`
   padding-top: 50px;
