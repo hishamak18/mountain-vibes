@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { Outlet, Link } from "react-router-dom";
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -12,9 +13,9 @@ const StyledMenu = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   transition: transform 0.3s ease-in-out;
-    z-index:1;
+  z-index: 1;
   @media (max-width: 576px) {
     width: 100%;
   }
@@ -53,22 +54,22 @@ const Burger = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => open ? '#ccc' : '#333'};
+    background-color: ${({ open }) => (open ? "#ccc" : "#333")};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
 
     &:nth-child(1) {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
 
     &:nth-child(2) {
-      transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
-      opacity: ${({ open }) => open ? 0 : 1};
+      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+      opacity: ${({ open }) => (open ? 0 : 1)};
     }
 
     &:nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
 `;
@@ -88,10 +89,51 @@ const Menu = () => {
         <div />
       </Burger>
       <StyledMenu open={open}>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/Reservation">Reservation</a>
-        <a href="/contact">Contact</a>
+        <Link
+          style={{
+            color: "rgb(15 44 15)",
+            textDecoration: "none",
+            fontSize: "1.2em",
+            fontWeight: "bold",
+          }}
+          to="/"
+        >
+          Home
+        </Link>
+        <Link
+          style={{
+            color: "rgb(15 44 15)",
+            textDecoration: "none",
+            fontSize: "1.2em",
+            fontWeight: "bold",
+          }}
+          to="/About"
+        >
+          About
+        </Link>
+        <Link
+          style={{
+            color: "rgb(15 44 15)",
+            textDecoration: "none",
+            fontSize: "1.2em",
+            fontWeight: "bold",
+          }}
+          to="/Reservation"
+        >
+          Reservation
+        </Link>
+
+        <Link
+          style={{
+            color: "rgb(15 44 15)",
+            textDecoration: "none",
+            fontSize: "1.2em",
+            fontWeight: "bold",
+          }}
+          to="/Contact"
+        >
+          Contact
+        </Link>
       </StyledMenu>
     </>
   );
