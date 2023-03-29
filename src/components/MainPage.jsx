@@ -1,6 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Outlet, Link } from "react-router-dom";
+import $ from 'jquery';
+
 
 const Container = styled.div`
   width: 100%;
@@ -10,7 +12,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-position: centre;
+  background-position: centre centre;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("https://images.pexels.com/photos/3222686/pexels-photo-3222686.jpeg?auto=compress&cs=tinysrgb&w=1600");
@@ -110,14 +112,20 @@ const Button = styled.button`
     margin-left:25px;
   }
 `;
-
 const MainPage = () => {
+ 
+  $(document).ready(function() {
+  
+    $('.fadeIn').hide()
+    $('.fadeIn').fadeIn(2000)
+    $('.fadeIn').css('transition ','all 2s ease ')
+  });
   return (
     <Container>
       <>
-      <HeaderMainPage> Best Place To Stay In Wayanad</HeaderMainPage>
+      <HeaderMainPage className="text"> Best Place To Stay In Wayanad</HeaderMainPage>
 
-      <Wrapper>
+      <Wrapper className="fadeIn">
         <Checks>
           <label style={{ display: "flex", flexDirection: "column" }}>
             <h4 style={{ paddingBottom: "13px", paddingLeft: "1px" }}>

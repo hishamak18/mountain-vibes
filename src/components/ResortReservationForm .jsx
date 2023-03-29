@@ -81,10 +81,48 @@ const ResortReservationForm = () => {
   const [children, setChildren] = useState("");
   const [note, setNote] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // code to submit the form data
+  
+    const reservationData = {
+      name,
+      phone,
+      address,
+      checkIn,
+      checkOut,
+      adults,
+      children,
+      note
+    };
+  
+    try {
+      const response = await fetch('http://localhost:5008/reservations/reserve/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(reservationData)
+      });
+  
+      if (!response.ok) {
+        throw new Error('Failed to submit reservation.');
+      }
+  
+      alert('Reservation submitted successfully.');
+      setName('');
+      setPhone('');
+      setAddress('');
+      setCheckIn('');
+      setCheckOut('');
+      setAdults('');
+      setChildren('');
+      setNote('');
+    } catch (error) {
+      console.error(error);
+      alert('Failed to submit reservation.');
+    }
   };
+  
 
   return (
     <div>

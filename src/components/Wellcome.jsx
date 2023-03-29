@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "../img/hero.jpg";
+import $ from 'jquery';
+import  { useRef, useEffect } from 'react';
+
 
 const Container = styled.div`
   height: 80vh;
@@ -46,6 +49,7 @@ const Tittle = styled.h1`
 const Img = styled.img`
   background-repeat: no-repeat;
   height: 400px;
+
   @media (max-width: 480px) {
     // display: none;
     height:200px;
@@ -53,9 +57,15 @@ const Img = styled.img`
 `;
 
 const Wellcome = () => {
+  $(document).ready(function() {
+  
+    $('.fadeIn').hide()
+    $('.fadeIn').fadeIn(2000)
+    $('.fadeIn').css('transition ','all 2s ease ')
+  });
   return (
     <Container>
-      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+      <div className="fadeIn" style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         <Tittle>Welcome!</Tittle>
         <P>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
@@ -64,7 +74,9 @@ const Wellcome = () => {
           ratione doloribus in doloremque placeat vel at!
         </P>
       </div>
-      <Img src={Image} />
+      <div className="fadeIn">
+      <Img src={Image}  />
+      </div>
     </Container>
   );
 };

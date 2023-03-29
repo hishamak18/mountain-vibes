@@ -6,7 +6,6 @@ import { Outlet, Link } from "react-router-dom";
 const Container = styled.div`
   // color:white;
   height: 60px;
-  background: transparent;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -17,6 +16,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   box-shadow: 0 24px 20px -16px rgba(0, 0, 0, 0.1);
   background-color: white;
+  
   width:100%;
   padding: 10px 20px;
   display: flex;
