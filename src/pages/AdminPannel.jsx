@@ -166,6 +166,8 @@ onChange={(event) => setRooms(event.target.value)}
 <th>Check-Out Date</th>
 <th>No Of Adults</th>
 <th>No Of Childrens</th>
+<th>Notes</th>
+
 
 </tr>
 </thead>
@@ -175,10 +177,12 @@ onChange={(event) => setRooms(event.target.value)}
 <td>{customer.name}</td>
 <td>{customer.phone}</td>
 <td>{customer.address}</td>
-<td>{customer.checkIn}</td>
-<td>{customer.checkOut}</td>
+<td>{new Date(customer.checkIn).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}</td>
+<td>{new Date(customer.checkOut).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}</td>
 <td>{customer.adults}</td>
 <td>{customer.children}</td>
+<td>{customer.note}</td>
+
 
 </tr>
 ))}
