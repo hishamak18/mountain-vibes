@@ -36,6 +36,7 @@ const HeaderMainPage = styled.h1`
     padding:10px 20px;
     position:absolute;
     top:60px;
+    width:100%;
 
   }
 `;
@@ -47,7 +48,7 @@ const Wrapper = styled.div`
   border-radius: 10px;
   font-family: sans-serif;
   position: absolute;
-  bottom: -60px;
+  bottom: -10px;
   @media (max-width: 480px) {
     background: rgb(255 255 255 / 63%);
     margin-bottom:70px;
@@ -93,23 +94,31 @@ const InputNum = styled.input`
   }
 `;
 const Button = styled.button`
-  background: rgb(15 44 15);
+  background: #fff;
   border: none;
   height: max-content;
-  width: 200px;
-  padding: 10px;
+  width: 400px;
+  padding: 30px;
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  color: white;
   font-size: 1.09em;
   font-weight: 800;
   border-radius: 15px;
+  box-shadow: 0 42px 68px -16px rgba(0, 0, 0, 0.1);
+
+    &:hover{
+      background:black;
+    }
   @media (max-width: 480px) {
     border-radius: 6px;
+    // background: rgb(255 255 255 / 63%);
     margin-left:25px;
+    width: 200px;
+    padding: 10px;
+
   }
 `;
 const MainPage = () => {
@@ -125,8 +134,8 @@ const MainPage = () => {
       <>
       <HeaderMainPage className="text"> Best Place To Stay In Wayanad</HeaderMainPage>
 
-      <Wrapper className="fadeIn">
-        <Checks>
+      <Wrapper className="">
+        {/* <Checks>
           <label style={{ display: "flex", flexDirection: "column" }}>
             <h4 style={{ paddingBottom: "13px", paddingLeft: "1px" }}>
               Check In
@@ -152,18 +161,18 @@ const MainPage = () => {
             <InputNum type="number" />
           </div>
           <div>
-            <h4 style={{ paddingBottom: "16px", color: "white" }}></h4>
+            <h4 style={{ paddingBottom: "16px", color: "white" }}></h4> */}
             <Button>
               {" "}
               <Link
                 to="/AvailableRooms"
-                style={{ color: "white", textDecoration: "none" }}
+                style={{ color: "#293d29", textDecoration: "none" }}
               >
-                Check Availabilty
+                Available Rooms
               </Link>
             </Button>
-          </div>
-        </Checks>
+          {/* </div>
+        </Checks> */}
       </Wrapper>
       </>
     </Container>

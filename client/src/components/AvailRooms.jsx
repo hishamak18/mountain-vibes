@@ -125,8 +125,8 @@ const AvailRooms = () => {
                 }}
               >
                 <Div>
-                <RoomTittle>{item.tittle}</RoomTittle>
-                <RoomsRate>{item.price}</RoomsRate>
+                {/* <RoomTittle>{item.tittle}</RoomTittle>
+                <RoomsRate>{item.price}</RoomsRate> */}
                 </Div>
               </div>
             </Rooms>

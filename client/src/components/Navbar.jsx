@@ -85,7 +85,17 @@ const NavBar = () => {
     <Container>
       <Wrapper>
         <Right>
+        <Link
+                  style={{
+                    color: "rgb(15 44 15)",
+                    textDecoration: "none",
+                    fontSize: "1.2em",
+                    fontWeight: "bold",
+                  }}
+                  to="/"
+                >
           <Logo src={Logos} />
+                </Link>
         </Right>
         <Centre>Mountain Vibes.</Centre>
         <Middle>

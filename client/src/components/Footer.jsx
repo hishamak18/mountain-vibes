@@ -56,13 +56,18 @@ const SocialIcon = styled.div`
   justify-content: center;
   margin: 20px;
   cursor: pointer;
-  &:hover {
-    transform: scale(1.1);
-  }
   @media (max-width: 480px) {
     width: 20px;
     height: 20px;
+    &:hover {
+      transform:scale(1.1);
+     
   }
+  }
+  &:hover {
+    transform:scale(1.1);
+   
+}
 `;
 
 const Center = styled.div`
@@ -118,8 +123,11 @@ const Footer = () => {
             to ensure that your stay with us is nothing short of exceptional.
           </Desc>
           <Social>
-            <SocialIcon color="3B5999">
-              <Instagram />
+            <SocialIcon color="3B5999!important">
+              <a style={{color:"white"}} href="https://www.instagram.com/mountainvibesresort/">
+              <Instagram href=""/>
+
+              </a>
             </SocialIcon>
             <SocialIcon color="55ACEE">
               <Twitter />
@@ -193,8 +201,8 @@ const Footer = () => {
             India , Kerala
           </ContactItem>
           <ContactItem>
-            <Phone style={{ marginRight: "10px" }} className="icn" />
-            +91 9876543210
+            <Phone style={{ marginRight: "10px" }} className="icn"/>
+            +91 7510922220
           </ContactItem>
           <ContactItem>
             <Mail style={{ marginRight: "10px" }} className="icn" />

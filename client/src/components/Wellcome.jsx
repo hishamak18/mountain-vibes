@@ -65,7 +65,7 @@ const Wellcome = () => {
   });
   return (
     <Container>
-      <div className="fadeIn" style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+      <div className="" style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         <Tittle>Welcome!</Tittle>
         <P>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
@@ -74,7 +74,7 @@ const Wellcome = () => {
           ratione doloribus in doloremque placeat vel at!
         </P>
       </div>
-      <div className="fadeIn">
+      <div className="">
       <Img src={Image}  />
       </div>
     </Container>
