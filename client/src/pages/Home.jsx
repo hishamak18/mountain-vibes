@@ -10,6 +10,7 @@ import Wellcome from "../components/Wellcome";
 import {images} from "../data";
 import MobileMenu from "../components/MobileMenu"
 import Admin from "./Admin"
+import FixedIcons from "../components/FixedIcons";
 
 const Wrapper = styled.div`
  
@@ -24,6 +25,7 @@ const Container = styled.div`
 const Home = () => {
   return (
     <Container>
+        <FixedIcons/>
       <Wrapper>
       <MobileMenu/>
         <Navbar />
