@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Facebook,
   Instagram,
@@ -13,11 +14,18 @@ import { Outlet, Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
-  background: #403a3a;
+  background: #1d262d;
   color: white;
   z-index: 1;
+  background-position: centre centre;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  background-image: url("https://img.freepik.com/free-vector/gradient-mountain-landscape_23-2149159772.jpg?w=1380&t=st=1680243287~exp=1680243887~hmac=f2c5808ac6c1733a3d03b40903a9bd54e89d9f3de72bcd48cf7eeaf4a51761f4");
   @media (max-width: 480px) {
     flex-direction: column;
+    background-size: 1023px 1203px;
+    background-position: 0px 0px;
   }
 `;
 const Left = styled.div`
@@ -36,8 +44,13 @@ const Logo = styled.h1`
 
 const Desc = styled.p`
   margin: 20px 0;
+  @media (max-width: 480px) {
+    color:rgb(133 107 107);
+  }
 `;
-
+const P = styled.p`
+color:#e1cccc;
+`
 const Social = styled.div`
   display: flex;
   @media (max-width: 480px) {
@@ -111,6 +124,7 @@ const Payment = styled.img`
 const Footer = () => {
   return (
     <Container>
+      
       <>
         <Left>
           <Logo>MountainVibes.</Logo>
@@ -198,15 +212,24 @@ const Footer = () => {
           <Tittle>Contact</Tittle>
           <ContactItem>
             <Room style={{ marginRight: "10px" }} className="icn" />
+            <P>
+
             India , Kerala
+            </P>
           </ContactItem>
           <ContactItem>
             <Phone style={{ marginRight: "10px" }} className="icn"/>
+            <P>
+              
             +91 7510922220
+            </P>
           </ContactItem>
           <ContactItem>
             <Mail style={{ marginRight: "10px" }} className="icn" />
-            mountainvibesresort@gmail.com
+                <P>
+
+            mountainvibesresort@gmail.com 
+                </P>
           </ContactItem>
         </Right>
       </>

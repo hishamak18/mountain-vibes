@@ -1,3 +1,4 @@
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./pages/About";
@@ -8,6 +9,9 @@ import AvailableRooms from "./pages/AvailableRoom";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Resevation from "./pages/Resevation";
+import SignIn from "./pages/SignIn";
+import AvailRooms from "./components/AvailRooms";
+
 
 
 export default function App() {
@@ -17,7 +21,10 @@ export default function App() {
         <Route index Component={Home} />
           <Route path="/Reservation"Component={Resevation} />
           <Route path="/Admin"Component={Admin} />
+          <Route path="/AdminSignInMountain"Component={SignIn} />
+
           <Route path="/AdminPannel"Component={AdminPannel} />
+          <Route path="/AvailRooms"Component={AvailRooms} />
 
           <Route path="/AvailableRooms"Component={AvailableRooms} />
           <Route path="/Contact"Component={Contact} />

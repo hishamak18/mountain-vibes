@@ -2,22 +2,28 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Outlet, Link } from "react-router-dom";
 import $ from 'jquery';
+import { useNavigate } from 'react-router';
+import bgimg from '../img/bg.jpg';
+import { useState } from 'react';
+// import queryString from 'query-string';
+import axios from 'axios';
 
-
-const Container = styled.div`
+var bg ={
+  backgroundImage: `url(${ bgimg })`,
+  backgroundPosition: "centre centre",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover"
+  }
+  const Container = styled.div`
+  height:100vh;
   width: 100%;
-  height: 100vh;
   display: flex;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-position: centre centre;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("https://images.pexels.com/photos/3222686/pexels-photo-3222686.jpeg?auto=compress&cs=tinysrgb&w=1600");
-
   @media (max-width: 480px) {
+    background-position:  top;
 
   }`;
 
@@ -35,7 +41,6 @@ const HeaderMainPage = styled.h1`
     font-size: 25px;
     padding:10px 20px;
     position:absolute;
-    top:60px;
     width:100%;
 
   }
@@ -51,12 +56,12 @@ const Wrapper = styled.div`
   bottom: -10px;
   @media (max-width: 480px) {
     background: rgb(255 255 255 / 63%);
-    margin-bottom:70px;
+    // margin-bottom:70px;
     position:absolute;
     bottom:35px;
   }
 `;
-const Checks = styled.div`
+const Checks = styled.form`
   padding: 20px;
   display: flex;
   gap: 30px;
@@ -94,11 +99,12 @@ const InputNum = styled.input`
   }
 `;
 const Button = styled.button`
-  background: #fff;
+  background:#132a13;
+  color:white;
   border: none;
   height: max-content;
-  width: 400px;
-  padding: 30px;
+  width: 200px;
+  padding: 20px;
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
@@ -110,7 +116,8 @@ const Button = styled.button`
   box-shadow: 0 42px 68px -16px rgba(0, 0, 0, 0.1);
 
     &:hover{
-      background:black;
+      // background:black;
+      transform:scale(1.05);
     }
   @media (max-width: 480px) {
     border-radius: 6px;
@@ -129,50 +136,72 @@ const MainPage = () => {
     $('.fadeIn').fadeIn(2000)
     $('.fadeIn').css('transition ','all 2s ease ')
   });
+  const navigate = useNavigate();
+  const [checkInDate, setCheckInDate] = useState('');
+  const [checkOutDate, setCheckOutDate] = useState('');
+  const [numAdults, setNumAdults] = useState(2);
+  const [numChildren, setNumChildren] = useState(1);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    const startDate = new Date(checkInDate);
+    const endDate = new Date(checkOutDate);
+    const timeDiff = Math.abs(endDate.getTime() - startDate.getTime());
+    const numDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+
+    const response = await axios.get('/calculateprice');
+    const roomPrice  = response.data;
+    const numGuests = numAdults + numChildren;
+    const extraCharges = (numGuests - 3) * 500;
+    const totalPrice = (numDays * roomPrice) + extraCharges;
+
+    navigate('/AvailRooms', { replace: true, state: { totalPrice }});
+    
+  };
   return (
-    <Container>
+    <Container style={bg}>
       <>
       <HeaderMainPage className="text"> Best Place To Stay In Wayanad</HeaderMainPage>
-
       <Wrapper className="">
-        {/* <Checks>
+        <Checks onSubmit={handleSubmit}>
           <label style={{ display: "flex", flexDirection: "column" }}>
             <h4 style={{ paddingBottom: "13px", paddingLeft: "1px" }}>
               Check In
             </h4>
-            <Input type="date" />
+            <Input type="date"  value={checkInDate} onChange={(e) => setCheckInDate(e.target.value)}/>
           </label>
           <label style={{ display: "flex", flexDirection: "column" }}>
             <h4 style={{ paddingBottom: "11px", paddingLeft: "1px" }}>
               Check Out
             </h4>
-            <Input type="date" />
+            <Input type="date" value={checkOutDate} onChange={(e) => setCheckOutDate(e.target.value)} />
           </label>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <h4 style={{ paddingBottom: "11px", paddingLeft: "1px" }}>
               Adults
             </h4>
-            <InputNum type="number" />
+            <InputNum type="number"  value={numAdults} onChange={(e) => setNumAdults(e.target.value)} />
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <h4 style={{ paddingBottom: "11px", paddingLeft: "1px" }}>
               Childrens
             </h4>
-            <InputNum type="number" />
+            <InputNum type="number" value={numChildren} onChange={(e) => setNumChildren(e.target.value)}/>
           </div>
           <div>
-            <h4 style={{ paddingBottom: "16px", color: "white" }}></h4> */}
-            <Button>
+            <h4 style={{ paddingBottom: "16px", color: "white" }}></h4>
+            <Button type="submit">
               {" "}
               <Link
                 to="/AvailableRooms"
-                style={{ color: "#293d29", textDecoration: "none" }}
+                style={{ color: "white", textDecoration: "none" }}
               >
-                Available Rooms
+                Check Availablity
               </Link>
             </Button>
-          {/* </div>
-        </Checks> */}
+          </div>
+        </Checks>
       </Wrapper>
       </>
     </Container>

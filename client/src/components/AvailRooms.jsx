@@ -1,12 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import {RoomImg} from "../data";
+import { useLocation } from 'react-router-dom';
+
+
+
 
 const Container = styled.div`
-  padding-top: 50px;
+  padding-top: 250px;
+  padding-top:100px;
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items:center;
   flex-direction: column;
   @media (max-width: 480px) {
     justify-content:space-between;
@@ -99,6 +105,9 @@ const Div =styled.div`
 `
 
 const AvailRooms = () => {
+  const location = useLocation();
+  var totalPrice = location.state && location.state.totalPrice;
+  console.log(totalPrice)
   return (
     <Container>
       <div>
@@ -106,7 +115,7 @@ const AvailRooms = () => {
         <P>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br />
           Ea veniam blanditiis repellat! Ea quae impedit, <br />
-          totam, voluptate eveniet quisquam possimus ipsam eius praesentium{" "}
+          totam, voluptate eveniet quisquam possimus ipsam eius praesentium
           <br />
           vero voluptates est nihil consequatur sapiente fugiat?
         </P>
@@ -125,8 +134,7 @@ const AvailRooms = () => {
                 }}
               >
                 <Div>
-                {/* <RoomTittle>{item.tittle}</RoomTittle>
-                <RoomsRate>{item.price}</RoomsRate> */}
+                 <RoomsRate> Price: {totalPrice} Rs</RoomsRate>
                 </Div>
               </div>
             </Rooms>
@@ -136,4 +144,5 @@ const AvailRooms = () => {
     </Container>
   );
 };
+
 export default AvailRooms;

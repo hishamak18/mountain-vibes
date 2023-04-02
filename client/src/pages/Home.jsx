@@ -11,6 +11,7 @@ import {images} from "../data";
 import MobileMenu from "../components/MobileMenu"
 import Admin from "./Admin"
 import FixedIcons from "../components/FixedIcons";
+import SignIn from "../pages/SignIn";
 
 const Wrapper = styled.div`
  

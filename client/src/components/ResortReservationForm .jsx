@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+
 const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -96,7 +97,7 @@ const ResortReservationForm = () => {
     };
   
     try {
-      const response = await fetch('http://localhost:5008/reservations/reserve/', {
+      const response = await fetch('http://localhost:5006/reservations/reserve/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -107,7 +108,9 @@ const ResortReservationForm = () => {
       if (!response.ok) {
         throw new Error('Failed to submit reservation.');
       }
-  
+     
+
+
       alert('Reservation submitted successfully.');
       setName('');
       setPhone('');

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import CallIcon from '@mui/icons-material/Call';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import $ from 'jquery';
+import { Instagram } from '@mui/icons-material';
 
 
 const Wrapper = styled.div`
@@ -24,7 +25,7 @@ const IconWrapper = styled.div`
 
 
 
-const phoneNumber = '9207993815';
+const phoneNumber = '+91 7510922220';
 
 const handleClickCall = () => {
   window.location.href = `tel:${phoneNumber}`;
@@ -33,6 +34,12 @@ const handleClickCall = () => {
 const handleClickWhatsApp = () => {
   window.location.href = `https://wa.me/${phoneNumber}`;
 };
+
+const handleClickInstagram =()=>{
+  window.location.href = `https://www.instagram.com/mountainvibesresort/`;
+
+  
+}
 
 const FixedIcons = () => {
 $(document).ready(function() {
@@ -50,6 +57,9 @@ $(document).ready(function() {
       </IconWrapper>
       <IconWrapper onClick={handleClickWhatsApp}>
         <WhatsAppIcon style={{color:"green",fontSize:'2.90em'}}  alt="WhatsApp Icon" />
+      </IconWrapper>
+      <IconWrapper onClick={handleClickInstagram}>
+        <Instagram style={{color:"red",fontSize:'2.90em'}}  alt="WhatsApp Icon" />
       </IconWrapper>
     </Wrapper>
   );

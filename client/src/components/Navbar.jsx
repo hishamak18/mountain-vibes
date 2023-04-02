@@ -6,9 +6,9 @@ import { Outlet, Link } from "react-router-dom";
 const Container = styled.div`
   // color:white;
   height: 60px;
-  position: fixed;
-  z-index: 1;
   top: 0;
+  position: fixed;
+  z-index:1;
   @media (max-width: 480px) {
     
   }
