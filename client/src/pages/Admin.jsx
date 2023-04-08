@@ -74,7 +74,7 @@ const Admin = () => {
     event.preventDefault();
   
     try {
-      const response = await axios.post('http://localhost:5008/admin/login', {
+      const response = await axios.post('http://mountainvibes.co.in/backend/admin/login', {
         email,
         password,
       });
