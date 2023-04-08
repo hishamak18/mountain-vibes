@@ -87,7 +87,7 @@ const AdminPanel = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await axios.get('http://localhost:5008/customers');
+        const response = await axios.get('http://mountainvibes.co.in/backend/customers');
         setCustomers(response.data);
       } catch (error) {
         console.error(error);
@@ -102,7 +102,7 @@ const AdminPanel = () => {
     event.preventDefault();
 
     try {
-      await axios.put('http://localhost:5008/rooms/price', {
+      await axios.put('http://mountainvibes.co.in/backend/rooms/price', {
         price,
       });
 
@@ -118,7 +118,7 @@ const AdminPanel = () => {
     event.preventDefault();
 
     try {
-      await axios.put('http://localhost:5008/rooms/availability', {
+      await axios.put('http://mountainvibes.co.in/backend/rooms/availability', {
         availableRooms,
       });
 
