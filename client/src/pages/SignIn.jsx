@@ -41,7 +41,7 @@ export default function SignInSide() {
       event.preventDefault();
     
       try {
-        const response = await axios.post('http://localhost:5006/admin/login', {
+        const response = await axios.post('http://mountainvibes.co.in/backend/admin/login', {
           email,
           password,
         });
