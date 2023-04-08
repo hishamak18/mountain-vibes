@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { Outlet, Link } from "react-router-dom";
 import $ from 'jquery';
 import { useNavigate } from 'react-router';
-import bgimg from '../img/bg.jpg';
+import bgimg from '../img/bg.jpeg';
 import { useState } from 'react';
 // import queryString from 'query-string';
 import axios from 'axios';
