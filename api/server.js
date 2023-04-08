@@ -17,10 +17,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use("/reservations", reservationsRouter);
-app.use('/customers', customerRoutes);
+app.use("/backend/reservations", reservationsRouter);
+app.use('/backend/customers', customerRoutes);
 
-app.post('/calculateprice', async (req, res) => {
+app.post('/backend/calculateprice', async (req, res) => {
   try {
     const { checkIn, checkOut, adults, children } = req.body; // retrieve the user input from the request body
     const roomCost = await RoomCost.findOne(); // get the room cost from the database
@@ -45,7 +45,7 @@ app.post('/calculateprice', async (req, res) => {
 
 
 
-app.post('/admin/login', (req, res) => {
+app.post('/backend/admin/login', (req, res) => {
   const { email, password } = req.body;
   if (email === process.env.MAIL && password === process.env.PASSWORD) {
     res.status(200).json({ success: true });
