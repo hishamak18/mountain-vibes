@@ -68,10 +68,7 @@ const Wellcome = () => {
       <div className="" style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         <Tittle>Welcome!</Tittle>
         <P>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
-          Quos accusantium quis est facere pariatur, vitae veritatis <br />
-          non deserunt distinctio sunt. Similique obcaecati officiis <br />
-          ratione doloribus in doloremque placeat vel at!
+          "Welcome to MountainVibes, where adventure meets relaxation! Nestled in the heart of the mountains, <br /> our resort offers breathtaking views, cozy accommodations, <br /> and a wide range of activities to suit every taste. Whether you're seeking a peaceful escape or an adrenaline-filled adventure, <br /> our friendly staff is here to ensure that your stay is unforgettable. <br /> So sit back, relax, and let the mountain vibes take you away."
         </P>
       </div>
       <div className="">
