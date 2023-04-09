@@ -62,25 +62,21 @@ const AboutUs = () => {
       <>
       <AboutTitle>About Us</AboutTitle>
       <AboutText>
-        Welcome to our beautiful resort, where luxury and relaxation meet. Our
-        resort is located in a serene and picturesque setting,
-        <br />
-        surrounded by lush greenery and crystal clear waters. We offer a wide
-        range of amenities and activities <br />
-        to ensure that your stay with us is nothing short of exceptional.
+                  "Welcome to MountainVibes, where adventure meets relaxation! Nestled in the heart of the mountains, <br /> our resort offers breathtaking views, cozy accommodations, <br /> and a wide range of activities to suit every taste. Whether you're seeking a peaceful escape or an adrenaline-filled adventure, <br /> our friendly staff is here to ensure that your stay is unforgettable. <br /> So sit back, relax, and let the mountain vibes take you away."
+
       </AboutText>
       </>
       <AboutList>
         <AboutListItem>
           <AboutListItemIcon>1</AboutListItemIcon>
           <AboutListItemText>
-            Five-star accommodations with breathtaking views
+            breathtaking views
           </AboutListItemText>
         </AboutListItem>
         <AboutListItem>
           <AboutListItemIcon>2</AboutListItemIcon>
           <AboutListItemText>
-            Gourmet dining options featuring the freshest ingredients
+            Gourmet dining options featuring the freshest ingredients homely food
           </AboutListItemText>
         </AboutListItem>
         <AboutListItem>
