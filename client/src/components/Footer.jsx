@@ -20,8 +20,7 @@ const Container = styled.div`
   background-position: centre centre;
   background-repeat: no-repeat;
   background-size: cover;
-  
-  background-image: url("https://img.freepik.com/free-vector/gradient-mountain-landscape_23-2149159772.jpg?w=1380&t=st=1680243287~exp=1680243887~hmac=f2c5808ac6c1733a3d03b40903a9bd54e89d9f3de72bcd48cf7eeaf4a51761f4");
+  background:black;
   @media (max-width: 480px) {
     flex-direction: column;
     background-size: 1023px 1203px;
