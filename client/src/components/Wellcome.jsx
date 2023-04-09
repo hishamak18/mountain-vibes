@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "../img/hero.jpg";
+import Image from "../img/hero.jpeg";
 import $ from 'jquery';
 import  { useRef, useEffect } from 'react';
 
