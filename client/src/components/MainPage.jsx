@@ -162,7 +162,7 @@ const MainPage = () => {
   return (
     <Container style={bg}>
       <>
-//       <HeaderMainPage className="text"> Best Place To Stay In Wayanad</HeaderMainPage>
+
       <Wrapper className="">
         <Checks onSubmit={handleSubmit}>
           <label style={{ display: "flex", flexDirection: "column" }}>
