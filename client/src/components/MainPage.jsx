@@ -8,12 +8,20 @@ import { useState } from 'react';
 // import queryString from 'query-string';
 import axios from 'axios';
 
-var bg ={
-  backgroundImage: `url(${ bgimg })`,
-  backgroundPosition: "centre centre",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover"
+
+  const moveBackground = keyframes`
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 0; }
+`;
+  const fadeIn = keyframes`
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+`;
+
   const Container = styled.div`
   height:100vh;
   width: 100%;
@@ -22,31 +30,20 @@ var bg ={
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(${bgimg});
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: ${moveBackground} 20s linear infinite;
   @media (max-width: 480px) {
     background-position:  top;
 
   }`;
 
-const HeaderMainPage = styled.h1`
-  background: rgb(255 255 255 / 63%);
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 0px;
-  font-size: 65px;
-  font-family: "Playfair Display", times, serif;
-  color: rgb(0 0 0 / 76%);
-  line-height: 1;
-  font-weight: bold;
-  @media (max-width: 480px) {
-    font-size: 25px;
-    padding:10px 20px;
-    position:absolute;
-    width:100%;
 
-  }
-`;
 
 const Wrapper = styled.div`
+  animation: ${fadeIn} 2s ease;
   display: flex;
   box-shadow: 0 42px 68px -16px rgba(0, 0, 0, 0.1);
   background: white;
@@ -160,7 +157,7 @@ const MainPage = () => {
     
   };
   return (
-    <Container style={bg}>
+    <Container >
       <>
 
       <Wrapper className="">
