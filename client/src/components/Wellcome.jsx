@@ -72,7 +72,7 @@ const Wellcome = () => {
         </P>
       </div>
       <div className="">
-      <Img src={Image}  />
+      <Img src='https://lh3.googleusercontent.com/KjIHPrf0fBDKhayUZ8MiIOfo9DCiFjn0jQuqCFYbKfH2XKMjY1khVNG05BR3sdQX8nJ8sqgWtSraGQZmhVsXxNAwOZRtmZJijrHbFLAcrVd0ZyC6-AybL5kA2Iw2YiPpUVTnAnAS92HDMtQ2pFvUb446qxUCsn-HEVzlqRlcECwatn9kmofkAIPdKpx2ar6bf3hF2EeRfeLQTDmmP01XEhFocSxVD3TABMRJxq9b7iepBcQQSrAe7szhvKfGApLh6OK4pkXvC2WYZCglNJELK0s5SFtwth3yJk-BA8vlkuApkI1c8EBqb7mc8f5I9N0uLjvcgQoWRFmUJHTf4qJYoTS85DnOsuRRoJ8Gh0qLWJCNp8V71YK5QmAso-AavwVUslWNNguKpUwB9HIlVqf5xm6NtDjoyjnBwFm5Z6pPOxRyHgDrM6NSnNnYwxiATbGBFyQulerW62L_jszlTF3jOWNQWMKhdVu5HECDW6Jzq1osz50hV9OS9uVhf0F4sWRAsdXjWS070GJcD01SbmfsBeAtF6xZkozKgY5oKRnWiRxp9Gg6TI5BYli7GuV2cDw5h_DiwKMePtWInQ1vSRwZ45LvoWsmF-XAriOMQ8xr68ySEcZxFg3vBEoFN-IzbX6JvsmwQj52IiGq22QRll1My6IvJK1lnWFg8B3CyglgDn16CWF_MlnkmypJkJoanyHfdqUHt4YcVovRY2abo0B40e8Xp85y6fgoqnXziKsceCzwzCCQn5ahHdFwW-Q3PknifLpDYU_oQfS8X3-wR-lbxwM_4CjM9dz_0fm-lCRGfOve4-BXzVQd7haBGezF2YFVQdzmKC4gGj3Aw4S0Z0XjRip0AmP0VFGq882BGTQR305A83VI_BXGjtxpGbT4ciGYtxZsllQH9nh3OFPvKTwLoGY2mVyvF50A5Ft-lhNUnVxK9-Sk=w1330-h887-s-no?authuser=0'  />
       </div>
     </Container>
   );
