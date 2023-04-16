@@ -7,15 +7,14 @@ import  { useRef, useEffect } from 'react';
 
 const Container = styled.div`
   width: 100%;
+  height:100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f2f4fb;
-  padding:50px 0 50px 0;
+  padding:50px 0px 50px 0px;
   @media (max-width: 480px) {
-    flex-direction:column;
-    height:50vh;
-    
+    flex-direction:column;    
   }
 `;
 const P = styled.p`
