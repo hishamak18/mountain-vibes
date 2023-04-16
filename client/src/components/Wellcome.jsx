@@ -6,15 +6,16 @@ import  { useRef, useEffect } from 'react';
 
 
 const Container = styled.div`
-  height: 80vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f2f4fb;
+  padding:50px 0 50px 0;
   @media (max-width: 480px) {
     flex-direction:column;
     height:50vh;
+    
   }
 `;
 const P = styled.p`
