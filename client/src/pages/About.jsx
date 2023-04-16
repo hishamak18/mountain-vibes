@@ -4,6 +4,8 @@ import AboutUs from "../components/AboutUs";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import MobileMenu from "../components/MobileMenu"
+import aboutimg from '../img/aboutus.svg';
+
 
 
 const Wrapper = styled.div`
@@ -12,8 +14,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("https://images.pexels.com/photos/1405773/pexels-photo-1405773.jpeg?auto=compress&cs=tinysrgb&w=1600");
-
+  background-image: url(${aboutimg});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
