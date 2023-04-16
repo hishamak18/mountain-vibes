@@ -5,12 +5,14 @@ const Preloader = () => {
   return (
     <Wrapper>
       <Spinner />
-      <Text>Welcome to MountainVibes Resort</Text>
+      <Text>MountainVibes Resort</Text>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
+padding-left: 50px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,10 +38,10 @@ const Spinner = styled.div`
 `;
 
 const Text = styled.h2`
-  margin-left: 20px;
+  padding: 50px;
   color: #bfbfbf;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 500;
 `;
 
 export default Preloader;
