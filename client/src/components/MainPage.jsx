@@ -30,7 +30,7 @@ import axios from 'axios';
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('https://drive.google.com/file/d/1E7QHEvpD8WL7273FJ_CN9pB4fsAQ_eQz/view?usp=share_link');
+  background-image: url('https://www.simpleimageresizer.com/_uploads/photos/57b4c532/bgg_2_70.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
