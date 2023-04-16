@@ -97,7 +97,7 @@ const ResortReservationForm = () => {
     };
   
     try {
-      const response = await fetch('http://mountainvibes.co.in/backend/reservations/reserve/', {
+      const response = await fetch('http://mountainvibes.co.in/backend/reservations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
