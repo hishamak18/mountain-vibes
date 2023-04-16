@@ -38,7 +38,6 @@ const App = () => {
           <Route path="/AvailableRooms" Component={AvailableRooms} />
           <Route path="/Contact" Component={Contact} />
           <Route path="/About" Component={About} />
-          <Route path="/Slider" Component={Slider} />
         </Routes>
       </Suspense>
     </BrowserRouter>
