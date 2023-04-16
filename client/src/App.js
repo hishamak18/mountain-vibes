@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Preloader from './components/Preloader';
-import About from './pages/About';
-import Admin from './pages/Admin';
-import AdminPannel from './pages/AdminPannel';
-import AvailableRooms from './pages/AvailableRoom';
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-import Resevation from './pages/Resevation';
-import SignIn from './pages/SignIn';
-import AvailRooms from './components/AvailRooms';
+
+const Home = lazy(() => import('./pages/Home'));
+const Resevation = lazy(() => import('./pages/Resevation'));
+const Admin = lazy(() => import('./pages/Admin'));
+const SignIn = lazy(() => import('./pages/SignIn'));
+const AdminPannel = lazy(() => import('./pages/AdminPannel'));
+const AvailRooms = lazy(() => import('./components/AvailRooms'));
+const AvailableRooms = lazy(() => import('./pages/AvailableRoom'));
+const Contact = lazy(() => import('./pages/Contact'));
+const About = lazy(() => import('./pages/About'));
+const Slider = lazy(() => import('./components/Slider'));
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -25,26 +27,22 @@ const App = () => {
   }
 
   return (
-    <>
-    {loading ? (
-      <Preloader />
-    ) : (
-      <BrowserRouter>
-      <Routes>
-        <Route index Component={Home} />
-        <Route path="/Reservation" Component={Resevation} />
-        <Route path="/Admin" Component={Admin} />
-        <Route path="/AdminSignInMountain" Component={SignIn} />
-        <Route path="/AdminPannel" Component={AdminPannel} />
-        <Route path="/AvailRooms" Component={AvailRooms} />
-        <Route path="/AvailableRooms" Component={AvailableRooms} />
-        <Route path="/Contact" Component={Contact} />
-        <Route path="/About" Component={About} />
-      </Routes>
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route index Component={Home} />
+          <Route path="/Reservation" Component={Resevation} />
+          <Route path="/Admin" Component={Admin} />
+          <Route path="/AdminSignInMountain" Component={SignIn} />
+          <Route path="/AdminPannel" Component={AdminPannel} />
+          <Route path="/AvailRooms" Component={AvailRooms} />
+          <Route path="/AvailableRooms" Component={AvailableRooms} />
+          <Route path="/Contact" Component={Contact} />
+          <Route path="/About" Component={About} />
+          <Route path="/Slider" Component={Slider} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
-    )}
-  </>
-   
   );
 };
 
