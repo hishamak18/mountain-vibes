@@ -11,7 +11,6 @@ const AvailRooms = lazy(() => import('./components/AvailRooms'));
 const AvailableRooms = lazy(() => import('./pages/AvailableRoom'));
 const Contact = lazy(() => import('./pages/Contact'));
 const About = lazy(() => import('./pages/About'));
-const Slider = lazy(() => import('./components/Slider'));
 
 const App = () => {
   const [loading, setLoading] = useState(true);
