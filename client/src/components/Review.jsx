@@ -36,12 +36,12 @@ const Tittle = styled.h1`
 const Button = styled.button`
   border-radius: 25px;
   border: none;
-  background: white;
-  color: grey;
+  background: #132a13;
+  color: white;
   padding: 20px 30px 20px 30px;
   font-size: 2.05em;
   font-weight: bold;
-  box-shadow: rgba(0, 0, -22, 1.1) 3px 31px 92px -31px;
+  box-shadow: rgba(0, 0, -22, 5.1) 3px 31px 92px -31px;
 
   @media (max-width: 480px) {
     border-radius: 10px;
@@ -59,7 +59,7 @@ const Review = () => {
           <Link
             to="/Reservation"
             style={{
-              color: "#403a3a",
+              color: "#fff",
               textDecoration: "none",
               fontFamily: "Playfair Display, times, serif",
               fontWeight: "700!important",
