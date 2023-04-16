@@ -25,14 +25,13 @@ const IconWrapper = styled.div`
 
 
 
-const phoneNumber = '+91 7510922220';
 
 const handleClickCall = () => {
-  window.location.href = `tel:${phoneNumber}`;
+  window.location.href = `tel:+917510922220`;
 };
 
 const handleClickWhatsApp = () => {
-  window.location.href = `https://wa.me/${phoneNumber}`;
+  window.location.href = `https://wa.me/+917510922220`;
 };
 
 const handleClickInstagram =()=>{
