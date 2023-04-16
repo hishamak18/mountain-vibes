@@ -53,13 +53,13 @@ $(document).ready(function() {
   return (
     <Wrapper>
       <IconWrapper className='my-icon' onClick={handleClickCall}>
-        <CallIcon  style={{color:"blue",fontSize:'2.90em'}} alt="Call Icon" />
+        <CallIcon  style={{color:"black",fontSize:'2.10em'}} alt="Call Icon" />
       </IconWrapper>
       <IconWrapper onClick={handleClickWhatsApp}>
-        <WhatsAppIcon style={{color:"green",fontSize:'2.90em'}}  alt="WhatsApp Icon" />
+        <WhatsAppIcon style={{color:"black",fontSize:'2.10em'}}  alt="WhatsApp Icon" />
       </IconWrapper>
       <IconWrapper onClick={handleClickInstagram}>
-        <Instagram style={{color:"red",fontSize:'2.90em'}}  alt="WhatsApp Icon" />
+        <Instagram style={{color:"black",fontSize:'2.10em'}}  alt="WhatsApp Icon" />
       </IconWrapper>
     </Wrapper>
   );
