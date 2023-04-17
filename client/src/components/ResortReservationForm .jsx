@@ -14,7 +14,7 @@ const Form = styled.form`
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border: none;
   @media (max-width: 480px) {
-    width: 350px;
+    width: 300px;
     height: max-content;
 
   }
