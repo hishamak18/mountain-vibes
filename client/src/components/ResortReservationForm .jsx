@@ -97,7 +97,7 @@ const ResortReservationForm = () => {
     };
   
     try {
-      const response = await fetch('http://localhost:5006/backend/reservations', {
+      const response = await fetch('http://localhost:5006/backend/reservations/reserve', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
