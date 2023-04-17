@@ -28,6 +28,6 @@ export const images = [
      { src: 'https://flic.kr/p/2otP43B', alt: 'Image 2' },
     { src: 'https://flic.kr/p/2otQedv', alt: 'Image 3' },
     { src: 'https://flic.kr/p/2otQeoR', alt: 'Image 4' },
-    { src: 'https://flic.kr/p/2otP42z, alt: 'Image 4' },
+    { src: 'https://flic.kr/p/2otP42z', alt: 'Image 4' },
   ];
   
