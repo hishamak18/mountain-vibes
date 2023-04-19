@@ -18,7 +18,7 @@
 
 export const images = [
 
-    { src: 'https://live.staticflickr.com/65535/52822521132_c8a70364f0_k.jpg', alt: 'Image 4' },
+    { src: 'https://live.staticflickr.com/65535/52822521132_c8a70364f0_z.jpg', alt: 'Image 4' },
      { src: 'https://live.staticflickr.com/65535/52823529328_8c1f778c4d_z.jpg', alt: 'Image 4' },
      { src: 'https://live.staticflickr.com/65535/52822519617_6fd52eee5a_w.jpg', alt: 'Image 4' },
      { src: 'https://live.staticflickr.com/65535/52823267339_7455332f1f_w.jpg', alt: 'Image 2' },
