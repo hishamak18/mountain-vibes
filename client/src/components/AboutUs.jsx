@@ -6,7 +6,8 @@ const AboutContainer = styled.div`
   padding: 20px;
   @media (max-width: 480px) {
     width: 350px;
-    // height:700px;
+    display:flex;
+    height:max-content;
 
   }
 `;
@@ -16,6 +17,10 @@ const AboutTitle = styled.h2`
   font-weight: bold;
   color: #333;
   margin-bottom: 30px;
+    @media (max-width: 480px) {
+      font-size:20px;
+    }
+
 `;
 
 const AboutText = styled.p`
@@ -24,6 +29,7 @@ const AboutText = styled.p`
   color: #555;
   margin-bottom: 30px;
   @media (max-width: 480px) {
+    font-size:15px;
   }
 `;
 
@@ -37,6 +43,9 @@ const AboutListItem = styled.li`
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+   @media (max-width: 480px) {
+      display:none;
+    }
 `;
 
 const AboutListItemIcon = styled.span`
@@ -49,23 +58,33 @@ const AboutListItemIcon = styled.span`
   line-height: 30px;
   font-size: 18px;
   margin-right: 15px;
+   @media (max-width: 480px) {
+      display:none;
+    }
 `;
 
 const AboutListItemText = styled.p`
   font-size: 20px;
   color: #555;
+   @media (max-width: 480px) {
+      display:none;
+    }
 `;
 
 const AboutUs = () => {
   return (
     <AboutContainer>
-      <>
+      <div>
+
       <AboutTitle>About Us</AboutTitle>
       <AboutText>
                   "Welcome to MountainVibes, where adventure meets relaxation! Nestled in the heart of the mountains, <br /> our resort offers breathtaking views, cozy accommodations, <br /> and a wide range of activities to suit every taste. Whether you're seeking a peaceful escape or an adrenaline-filled adventure, <br /> our friendly staff is here to ensure that your stay is unforgettable. <br /> So sit back, relax, and let the mountain vibes take you away."
 
       </AboutText>
-      </>
+      
+      </div>
+      <div>
+
       <AboutList>
         <AboutListItem>
           <AboutListItemIcon>1</AboutListItemIcon>
@@ -87,6 +106,7 @@ const AboutUs = () => {
           </AboutListItemText>
         </AboutListItem>
       </AboutList>
+      </div>
     </AboutContainer>
   );
 };
