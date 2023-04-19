@@ -1,37 +1,36 @@
 import React from "react";
-import styled from "styled-components";
-import Footer from "../components/Footer";
+
+import ContactForm from "../components/ContactForm";
 import Navbar from "../components/Navbar";
-import ResortReservationForm from "../components/ResortReservationForm ";
+import Footer from "../components/Footer";
+import styled from "styled-components";
 import MobileMenu from "../components/MobileMenu"
-import reservationimg from '../img/reservation.svg';
+import contactimg from '../img/contact.svg';
+
 
 
 const Wrapper = styled.div`
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(${reservationimg});
+  background-image: url(${contactimg});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
+  @media (max-width: 480px) {
+    background-position: -275px -10px;
+    padding-top:100px;
+
+
+  }
 `;
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-`;
-const Reservation = () => {
+
+const Contact = () => {
   return (
-    <Container>
-      <Navbar />
-      <MobileMenu/>
-      <Wrapper>
-        <ResortReservationForm />
-      </Wrapper>
+    <Wrapper>
+        <Navbar />
+        <MobileMenu/>
+        <ContactForm />
       <Footer />
-    </Container>
+    </Wrapper>
   );
 };
 
-export default Reservation;
+export default Contact;
