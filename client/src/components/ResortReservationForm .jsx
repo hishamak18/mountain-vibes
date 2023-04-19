@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const H = styled.div`
 padding-top:214px;
+height:100vh;
 `
 const Form = styled.form`
   display: flex;
@@ -105,7 +106,7 @@ const ResortReservationForm = () => {
     };
   
     try {
-      const response = await fetch('http://localhost:5006/backend/reservations/reserve', {
+      const response = await fetch('http://mountainvibes.co.in/backend/reservations/reserve', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
