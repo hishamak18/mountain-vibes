@@ -22,6 +22,7 @@ const Container = styled.div`
   background-size: cover;
   background:black;
   @media (max-width: 480px) {
+    z-index:1!important;
     flex-direction: column;
     background-size: 1023px 1203px;
     background-position: 0px 0px;
