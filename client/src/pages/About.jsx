@@ -9,7 +9,6 @@ import aboutimg from '../img/aboutus.svg';
 
 
 const Wrapper = styled.div`
-  height: 100vh;
   padding:20px;
   display: flex;
   align-items: center;
