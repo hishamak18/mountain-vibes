@@ -8,16 +8,15 @@ import reservationimg from '../img/reservation.svg';
 
 
 const Wrapper = styled.div`
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  `;
+  const Container = styled.div`
   background-image: url(${reservationimg});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-`;
-const Container = styled.div`
   width: 100%;
   height: 100vh;
 `;

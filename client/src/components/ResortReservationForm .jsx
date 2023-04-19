@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-
+const H = styled.div`
+padding-top:214px;
+`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -15,6 +17,10 @@ const Form = styled.form`
   border: none;
   @media (max-width: 480px) {
     width: 300px;
+    height: 500px;
+
+    
+
     height: max-content;
 
   }
@@ -31,7 +37,7 @@ const Input = styled.input`
   border-radius: 4px;
   outline: none;
   @media (max-width: 480px) {
-    padding: 10px 5px;
+    padding: 5px 5px;
   }
 `;
 const Input1 = styled.input`
@@ -43,7 +49,9 @@ const Input1 = styled.input`
   margin-top: 15px;
   outline: none;
   @media (max-width: 480px) {
-    padding: 10px 5px;
+    padding: 5px 5px;
+    width: 100px;
+
 
   }
 `;
@@ -128,7 +136,7 @@ const ResortReservationForm = () => {
   
 
   return (
-    <div>
+    <H>
       <Form onSubmit={handleSubmit}>
         <h1
           style={{
@@ -214,7 +222,7 @@ const ResortReservationForm = () => {
 
         <Button type="submit">Reserve </Button>
       </Form>
-    </div>
+    </H>
   );
 };
 
