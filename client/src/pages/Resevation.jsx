@@ -10,6 +10,7 @@ import contactimg from '../img/contact.svg';
 
 
 const Wrapper = styled.div`
+<<<<<<< HEAD
   background-image: url(${contactimg});
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,6 +24,21 @@ const Wrapper = styled.div`
 `;
 
 const Contact = () => {
+=======
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  `;
+  const Container = styled.div`
+  background-image: url(${reservationimg});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+`;
+const Reservation = () => {
+>>>>>>> origin/main
   return (
     <Wrapper>
         <Navbar />
