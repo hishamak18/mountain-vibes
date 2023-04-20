@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import ResortReservationForm from "../components/ResortReservationForm ";
+import ResortReservationForm from "../components/ResortReservationForm";
 import MobileMenu from "../components/MobileMenu"
 import reservationimg from '../img/reservation.svg';
 
