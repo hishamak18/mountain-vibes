@@ -37,10 +37,11 @@ const Centre = styled.h1`
   justify-content: center;
   margin-left: 8px;
   @media (max-width: 480px){
-    font-size: 1.2em;
-    // margin-right:140px;
-    margin-right:10px;
-  }
+    font-size: 16px;
+    // margin-right40px;
+    margin-right:63px;
+ 
+ }
 `;
 const Middle = styled.div`
 flex: end;
@@ -97,7 +98,7 @@ const NavBar = () => {
           <Logo src={Logos} />
                 </Link>
         </Right>
-        <Centre>Mountain Vibes.</Centre>
+        <Centre>Mountain Vibes</Centre>
         <Middle>
           <LiandH>
             <Ul>
