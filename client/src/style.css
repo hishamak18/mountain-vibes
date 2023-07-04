@@ -4,3 +4,45 @@ input[type=date]:required:invalid::-webkit-datetime-edit {
 input[type=date]:focus::-webkit-datetime-edit {
     color: black !important;
 }
+
+.navlink{
+    color: #132a13;
+    text-decoration: none;
+     font-size: 1.2em;
+    font-weight: bold;
+}
+.para{
+    text-align: left;
+    /* Adjust the alignment as needed */
+        margin: 0 auto; /* Centers the paragraph horizontally */
+        max-width: 600px; /* Adjust the maximum width as needed */
+       
+}
+.welcCard{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  align-items: center;
+}
+   
+    @media  (max-width: 480px) {
+        .welcCard{
+
+            flex-direction:column;    
+        }
+        .para{
+            text-align: right;
+
+        }
+        .imgWelc{
+        display: none;
+        }
+    }
+    .hieght50vh{
+        height:50vh;
+    }
+.build{
+    height: 50px;
+}
+      

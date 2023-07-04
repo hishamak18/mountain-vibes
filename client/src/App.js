@@ -1,16 +1,16 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Preloader from './components/Preloader';
-
-const Home = lazy(() => import('./pages/Home'));
-const Resevation = lazy(() => import('./pages/Resevation'));
-const Admin = lazy(() => import('./pages/Admin'));
-const SignIn = lazy(() => import('./pages/SignIn'));
-const AdminPannel = lazy(() => import('./pages/AdminPannel'));
-const AvailRooms = lazy(() => import('./components/AvailRooms'));
-const AvailableRooms = lazy(() => import('./pages/AvailableRoom'));
-const Contact = lazy(() => import('./pages/Contact'));
-const About = lazy(() => import('./pages/About'));
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Preloader from "./components/Preloader";
+import "../src/style.css";
+const Home = lazy(() => import("./pages/Home"));
+const Reservation = lazy(() => import("./pages/Reservation"));
+const Admin = lazy(() => import("./pages/Admin"));
+const SignIn = lazy(() => import("./pages/SignIn"));
+const AdminPanel = lazy(() => import("./pages/AdminPanel"));
+const AvailRooms = lazy(() => import("./components/AvailRooms"));
+const AvailableRooms = lazy(() => import("./pages/AvailableRoom"));
+const Contact = lazy(() => import("./pages/Contact"));
+const About = lazy(() => import("./pages/About"));
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -30,10 +30,10 @@ const App = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route index Component={Home} />
-          <Route path="/Reservation" Component={Resevation} />
+          <Route path="/Reservation" Component={Reservation} />
           <Route path="/Admin" Component={Admin} />
           <Route path="/AdminSignInMountain" Component={SignIn} />
-          <Route path="/AdminPannel" Component={AdminPannel} />
+          <Route path="/AdminPanel" Component={AdminPanel} />
           <Route path="/AvailRooms" Component={AvailRooms} />
           <Route path="/AvailableRooms" Component={AvailableRooms} />
           <Route path="/Contact" Component={Contact} />

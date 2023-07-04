@@ -1,34 +1,31 @@
 import React from "react";
 import styled from "styled-components";
-import {RoomImg} from "../data";
-import { useLocation } from 'react-router-dom';
-
-
-
+import { RoomImg } from "../data";
+import { useLocation } from "react-router-dom";
+import Card from "./Card";
 
 const Container = styled.div`
   padding-top: 250px;
-  padding-top:100px;
+  padding-top: 100px;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   flex-direction: column;
   @media (max-width: 480px) {
-    justify-content:space-between;
+    justify-content: space-between;
   }
 `;
-const  Wrap =styled.div`
-display: flex;
-justifyContent:center;
-align-items:center;
-gap:20px;
+const Wrap = styled.div`
+  display: flex;
+  justifycontent: center;
+  align-items: center;
+  gap: 20px;
 
-@media (max-width: 480px) {
-  flex-direction:column;
-}
-
-`
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+`;
 
 const Tittle = styled.h1`
   text-align: center;
@@ -37,8 +34,8 @@ const Tittle = styled.h1`
   font-weight: 700;
   @media (max-width: 480px) {
     font-size: 20px;
-    margin-top:50px;
-    padding-bottom:20px;
+    margin-top: 50px;
+    padding-bottom: 20px;
   }
 `;
 
@@ -57,7 +54,7 @@ const P = styled.p`
   line-height: 1.8;
   padding-bottom: 20px;
   @media (max-width: 480px) {
-    display:none;
+    display: none;
   }
 `;
 const Rooms = styled.div``;
@@ -65,7 +62,7 @@ const Image = styled.img`
   height: 300px;
   @media (max-width: 480px) {
     height: 280px;
-    padding:10px;
+    padding: 10px;
   }
 `;
 const RoomTittle = styled.h2`
@@ -89,25 +86,23 @@ const RoomsRate = styled.span`
   text-align: center;
   @media (max-width: 480px) {
     font-size: 1rem;
-    line-height:1.2;
+    line-height: 1.2;
   }
 `;
-const Div =styled.div`
-  display:flex;
-  flex-direction:column;
+const Div = styled.div`
+  display: flex;
+  flex-direction: column;
   @media (max-width: 480px) {
-    display:flex;
-  flex-direction:row;
-  gap:15px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
   }
-
-  
-`
+`;
 
 const AvailRooms = () => {
   const location = useLocation();
   var totalPrice = location.state && location.state.totalPrice;
-  console.log(totalPrice)
+  console.log(totalPrice);
   return (
     <Container>
       <div>
@@ -120,25 +115,9 @@ const AvailRooms = () => {
           vero voluptates est nihil consequatur sapiente fugiat?
         </P>
       </div>
-      <Wrap >
+      <Wrap>
         {RoomImg.map((item) => {
-          return (
-            <Rooms>
-              <Image src={item.img} />
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexDirection: "column",
-                }}
-              >
-                <Div>
-                 <RoomsRate> Price: {totalPrice} Rs</RoomsRate>
-                </Div>
-              </div>
-            </Rooms>
-          );
+          return <Card image={item.img} key={item.tittle} />;
         })}
       </Wrap>
     </Container>

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 import styled from "styled-components";
-import {images} from "../data";
+import { Images } from "../data";
 import "../style.css";
 
 const Container = styled.div`
@@ -11,7 +11,6 @@ const Container = styled.div`
   overflow: hidden;
   @media (max-width: 480px) {
     height: 50vh;
-
   }
 `;
 
@@ -38,7 +37,6 @@ const ImgContainer = styled.div`
   flex: 1;
   @media (max-width: 480px) {
     height: 50vh;
-
   }
 `;
 
@@ -47,7 +45,6 @@ const Image = styled.img`
   border-radius: 8px;
   @media (max-width: 480px) {
     border-radius: 4px;
-
   }
 `;
 
@@ -64,16 +61,16 @@ const Photos = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSlideIndex(slideIndex === images.length - 1 ? 0 : slideIndex + 1);
+      setSlideIndex(slideIndex === Images.length - 1 ? 0 : slideIndex + 1);
     }, 2000);
     return () => clearInterval(interval);
   }, [slideIndex]);
 
   return (
-      <Container>
-    <div>
+    <Container>
+      <div>
         <Wrapper slideIndex={slideIndex}>
-          {images.map((item) => {
+          {Images.map((item) => {
             return (
               <Slide>
                 <div>
@@ -85,9 +82,8 @@ const Photos = () => {
             );
           })}
         </Wrapper>
-
-    </div>
-      </Container>
+      </div>
+    </Container>
   );
 };
 

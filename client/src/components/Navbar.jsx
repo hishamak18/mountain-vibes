@@ -8,16 +8,15 @@ const Container = styled.div`
   height: 60px;
   top: 0;
   position: fixed;
-  z-index:1;
+  z-index: 1;
   @media (max-width: 480px) {
-    
   }
 `;
 const Wrapper = styled.div`
   box-shadow: 0 24px 20px -16px rgba(0, 0, 0, 0.1);
   background-color: white;
-  
-  width:100%;
+
+  width: 100%;
   padding: 10px 20px;
   display: flex;
   // overflow:hidden;
@@ -29,23 +28,22 @@ const Wrapper = styled.div`
 `;
 const Centre = styled.h1`
   flex: 1;
-  font-family: serif!important;
-  color: #f48220;
-  color: #403a3a;
+  font-family: "Caveat";
+  font-family: "Fira Sans", sans-serif;
+  color: #132a13;
   font-size: 1.6em;
   align-items: center;
   justify-content: center;
   margin-left: 8px;
-  @media (max-width: 480px){
+  @media (max-width: 480px) {
     font-size: 16px;
     // margin-right40px;
-    margin-right:63px;
- 
- }
+    margin-right: 63px;
+  }
 `;
 const Middle = styled.div`
-flex: end;
-display: flex;
+  flex: end;
+  display: flex;
 
   @media (max-width: 480px) {
     display: none;
@@ -59,7 +57,7 @@ const Logo = styled.img`
 `;
 const Right = styled.div`
   float: right;
-  flex:1;
+  flex: 1;
 `;
 const LiandH = styled.div``;
 const Ul = styled.ul`
@@ -86,71 +84,39 @@ const NavBar = () => {
     <Container>
       <Wrapper>
         <Right>
-        <Link
-                  style={{
-                    color: "rgb(15 44 15)",
-                    textDecoration: "none",
-                    fontSize: "1.2em",
-                    fontWeight: "bold",
-                  }}
-                  to="/"
-                >
-          <Logo src={Logos} />
-                </Link>
+          <Link
+            style={{
+              color: "#f48220",
+              textDecoration: "none",
+              fontSize: "1.2em",
+              fontWeight: "bold",
+            }}
+            to="/"
+          >
+            <Logo src={Logos} />
+          </Link>
         </Right>
-        <Centre>Mountain Vibes</Centre>
+        <Centre>MOUNTAIN VIBES</Centre>
         <Middle>
           <LiandH>
             <Ul>
               <Li>
-                <Link
-                  style={{
-                    color: "rgb(15 44 15)",
-                    textDecoration: "none",
-                    fontSize: "1.2em",
-                    fontWeight: "bold",
-                  }}
-                  to="/"
-                >
+                <Link className="navlink" to="/">
                   Home
                 </Link>
               </Li>
               <Li>
-                <Link
-                  style={{
-                    color: "rgb(15 44 15)",
-                    textDecoration: "none",
-                    fontSize: "1.2em",
-                    fontWeight: "bold",
-                  }}
-                  to="/About"
-                >
+                <Link className="navlink" to="/About">
                   About
                 </Link>
               </Li>
               <Li>
-                <Link
-                  style={{
-                    color: "rgb(15 44 15)",
-                    textDecoration: "none",
-                    fontSize: "1.2em",
-                    fontWeight: "bold",
-                  }}
-                  to="/Reservation"
-                >
+                <Link className="navlink" to="/Reservation">
                   Reservation
                 </Link>
               </Li>
               <Li>
-                <Link
-                  style={{
-                    color: "rgb(15 44 15)",
-                    textDecoration: "none",
-                    fontSize: "1.2em",
-                    fontWeight: "bold",
-                  }}
-                  to="/Contact"
-                >
+                <Link className="navlink" to="/Contact">
                   Contact
                 </Link>
               </Li>
